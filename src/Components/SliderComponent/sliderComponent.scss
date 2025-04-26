@@ -1,0 +1,111 @@
+  .slideComponent {
+    min-height: 736px;
+    max-height: 800px;
+    padding-bottom: 64px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    .slider {
+      min-width: 1137px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      .textPart {
+        max-width: 320px;
+
+        h2,
+        p,
+        button {
+          opacity: 0;
+          transform: translate(-50%);
+          animation-duration: 0.2s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+          animation-name: none;
+        }
+      }
+
+      img {
+        width: 465px;
+        height: 100%;
+        position: absolute;
+        left: 54%;
+        right: auto;
+        top: 0;
+        transform: translate(-50%);
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translate(50%);
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-name: none;
+
+        svg {
+          font-size: 28px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &.animate {
+      .textPart {
+        h2 {
+          margin-bottom: 20px;
+          font-size: 40px;
+          animation-name: toBe;
+          animation-delay: 0s;
+        }
+
+        p {
+          line-height: 1.8;
+          font-size: 18px;
+          animation-name: toBe;
+          animation-delay: 0.1s;
+        }
+
+        button {
+          margin-top: 40px;
+          padding: 15px 20px;
+          animation-name: toBe;
+          animation-delay: 0.2s;
+        }
+      }
+
+      a {
+        animation-name: toBeLink;
+        animation-delay: 0.4s;
+      }
+    }
+  }
+
+  @keyframes toBe {
+    from {
+      opacity: 0;
+      transform: translate(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+
+  @keyframes toBeLink {
+    from {
+      opacity: 0;
+      transform: translate(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+    

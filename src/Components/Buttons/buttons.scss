@@ -1,0 +1,23 @@
+$navBtnColor: #eeaf4f;
+$navBtnHover: rgba(237, 172, 74, 0.64);
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease, visibility 0s;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding: 9.5px 28px;
+  border: none;
+  border-radius: 20px;
+  background-color: $navBtnColor;
+  font-size: 16px;
+  color: white;
+  &:hover {
+    background: $navBtnHover;
+  }
+}
+

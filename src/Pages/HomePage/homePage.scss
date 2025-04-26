@@ -1,0 +1,25 @@
+.homePage {
+  font-family: "Roboto";
+  margin-bottom: 80px;
+  .homePageTop {
+    min-height: 800px;
+    background-image: url("../../Images/testImg1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .headSection {
+      width: 100%;
+      background-color: gray;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .homePageBottom {
+    min-height: 800px;
+    background-image: url("../../Images/testImg1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
