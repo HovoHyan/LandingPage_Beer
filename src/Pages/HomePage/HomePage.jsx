@@ -4,6 +4,9 @@ import "./homePage.scss";
 import HeaderSection from "./HeaderSection/HeaderSection";
 import StorySection from "./OurStorySection/StorySection";
 import SlideSection from "./SlideSection/SlideSection";
+import ResponsibilySection from "./ResponsibilySection/ResponsibilySection";
+import TextSection from "./TextSection/TextSection";
+import CardSection from "./CardSection/CardSection";
 
 const HomePage = () => {
   // const topRef = useRef(null);
@@ -18,12 +21,15 @@ const HomePage = () => {
   //   window.addEventListener("scroll", handleScroll);
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
-  
+
   return (
     <div className="homePage">
       <HeaderSection />
       <StorySection />
       <SlideSection />
+      <ResponsibilySection />
+      <TextSection />
+      <CardSection />
     </div>
   );
 };

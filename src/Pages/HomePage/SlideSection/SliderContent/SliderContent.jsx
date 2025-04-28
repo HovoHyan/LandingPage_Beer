@@ -20,7 +20,7 @@ const SliderContent = () => {
     >
       {[0, 1, 2].map((slide, index) => (
         <SwiperSlide key={index}>
-          <SliderComponent isActive={activeIndex === index} /> {/* Передаем isActive */}
+          <SliderComponent isActive={activeIndex === index} />
         </SwiperSlide>
       ))}
     </Swiper>

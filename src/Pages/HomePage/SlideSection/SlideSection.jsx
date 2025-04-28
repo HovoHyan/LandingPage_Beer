@@ -4,7 +4,7 @@ import SliderContent from './SliderContent/SliderContent'
 
 const SlideSection = () => {
   return (
-    <section className='productSlider'>
+    <section className='productSlider container'>
         <SliderContent />
     </section>
   )

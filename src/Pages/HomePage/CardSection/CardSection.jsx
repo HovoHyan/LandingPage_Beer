@@ -1,15 +1,9 @@
 import React, { useEffect, useRef } from "react";
 // import storyImg from "../../../Images/headerBackground.png";
+import "./cardSection.scss";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
-import "./storySection.scss";
-
-const StorySection = () => {
-  const boxItemRef = useRef(null);
-  const boxItemRef2 = useRef(null);
-  const boxItemRef3 = useRef(null);
-
-  const refsArr = [boxItemRef, boxItemRef2, boxItemRef3];
-
+const CardSection = () => {
+  const cardref = useRef(null);
   useEffect(() => {
     let lastScrollY = window.scrollY;
     let shownBoxes = new Set();
@@ -33,26 +27,32 @@ const StorySection = () => {
     const onScroll = () => {
       const currentScrollY = window.scrollY;
 
-      showBoxWithText(boxItemRef, 120);
-      showBoxWithText(boxItemRef2, 120);
-      showBoxWithText(boxItemRef3, 450);
+      showBoxWithText(cardref, 3500);
 
       lastScrollY = currentScrollY;
     };
+
+    console.log(cardref);
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section className="storySection container">
-      <h2 className="sectionTitle">Our Story</h2>
-      <div className="contentBox">
-        {refsArr.map((el, ind) => (
-          <DublicateComponent ref={el} styleName={"boxItems"} key={ind} />
-        ))}
-      </div>
+    <section className="cardSection container">
+      {/* <div className="cardItem" ref={cardref}>
+        <img src={storyImg} alt="BackImage" />
+        <div className="textBox">
+          <span className="textSpan">Our Title</span>
+          <h3 className="textTitle">Lorem ipsum dolor sit.</h3>
+          <p className="moreText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            accusantium ipsa quos, error ut sed.
+          </p>
+        </div>
+      </div> */}
+      <DublicateComponent ref={cardref} styleName={"cardItem"} />
     </section>
   );
 };
 
-export default StorySection;
+export default CardSection;
