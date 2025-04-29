@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-// import storyImg from "../../../Images/headerBackground.png";
 import "./cardSection.scss";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
+
 const CardSection = () => {
   const cardref = useRef(null);
   useEffect(() => {
@@ -39,17 +39,6 @@ const CardSection = () => {
   }, []);
   return (
     <section className="cardSection container">
-      {/* <div className="cardItem" ref={cardref}>
-        <img src={storyImg} alt="BackImage" />
-        <div className="textBox">
-          <span className="textSpan">Our Title</span>
-          <h3 className="textTitle">Lorem ipsum dolor sit.</h3>
-          <p className="moreText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-            accusantium ipsa quos, error ut sed.
-          </p>
-        </div>
-      </div> */}
       <DublicateComponent ref={cardref} styleName={"cardItem"} />
     </section>
   );

@@ -14,7 +14,7 @@ const SliderComponent = ({ isActive }) => {
   }, [isActive]);
 
   return (
-    <div className={`slideComponent ${animateClass}`}>
+    <div className={`slideComponent ${animateClass} container`}>
       <div className="slider">
         <div className="textPart">
           <h2>Slide Text Title</h2>
