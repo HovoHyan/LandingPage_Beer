@@ -31,9 +31,6 @@ const CardSection = () => {
 
       lastScrollY = currentScrollY;
     };
-
-    console.log(cardref);
-
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

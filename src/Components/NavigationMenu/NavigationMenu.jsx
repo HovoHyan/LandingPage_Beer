@@ -34,9 +34,9 @@ const NavigationMenu = () => {
           <img src={logoImg} alt="logo" />
           <ul className={`navLinks ${isMenuOpen ? "open" : ""}`}>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/products">Products</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/about">About 379</NavLink></li>
+            <li><NavLink to="/products">379 Beer Styles</NavLink></li>
+            <li><NavLink to="/contact">Find Us</NavLink></li>
             <li><NavLink to="/">Globus</NavLink></li>
           </ul>
           <div

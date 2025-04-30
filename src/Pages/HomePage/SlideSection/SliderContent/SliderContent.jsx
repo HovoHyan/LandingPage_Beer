@@ -13,6 +13,7 @@ const SliderContent = () => {
       autoplay={{
         delay: 3000,
       }}
+      loop={true}
       speed={1500}
       modules={[Autoplay]}
       className="mySwiper"

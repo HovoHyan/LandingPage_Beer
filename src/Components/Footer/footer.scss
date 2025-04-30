@@ -33,10 +33,13 @@ footer {
         height: 100%;
       }
     }
+    img {
+      width: 84px;
+    }
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .footerContent {
     .footerNav {
       flex-direction: column;
@@ -50,7 +53,7 @@ footer {
       }
     }
 
-    h1 {
+    img {
       order: -1;
     }
   }

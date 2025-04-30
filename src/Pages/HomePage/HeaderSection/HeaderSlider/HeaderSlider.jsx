@@ -1,12 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import slideImg from "../../../../Images/homeBack2.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./headerSlider.scss";
+import HeaderSlide from "../../../../Components/HeaderSlide/HeaderSlide";
+import { useState } from "react";
 
 const HeaderSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Swiper
       pagination={{
@@ -15,37 +17,17 @@ const HeaderSlider = () => {
       autoplay={{
         delay: 5000,
       }}
+      loop={true}
       speed={1000}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
+      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
     >
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={slideImg} alt="Slide" />
-      </SwiperSlide>
+      {[0,1,2,3].map((slide, index) => (
+        <SwiperSlide key={index}>
+          <HeaderSlide isActive={activeIndex === index} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
