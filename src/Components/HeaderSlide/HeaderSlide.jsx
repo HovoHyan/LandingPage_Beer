@@ -3,15 +3,20 @@ import product from "../../Images/homeBack2.png";
 import "./headerSlide.scss";
 
 const HeaderSlide = ({ isActive }) => {
-  const [animateClass, setAnimateClass] = useState("");
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     if (isActive) {
-      setAnimateClass("headAnimate");
+      setAnimate(false);
+      const timeout = setTimeout(() => setAnimate(true), 500);
+      return () => clearTimeout(timeout);
+    } else {
+      setAnimate(false);
     }
   }, [isActive]);
+
   return (
-    <div className={`headSlide ${animateClass}`}>
+    <div className={`headSlide ${animate ? "headAnimate" : ""}`}>
       <img src={product} alt="Head" />
       <div className="headSlideText">
         <span>Campaigns</span>

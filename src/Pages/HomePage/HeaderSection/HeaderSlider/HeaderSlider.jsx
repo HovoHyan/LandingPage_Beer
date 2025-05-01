@@ -23,7 +23,7 @@ const HeaderSlider = () => {
       className="mySwiper"
       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
     >
-      {[0,1,2,3].map((slide, index) => (
+      {[0, 1, 2, 3].map((slide, index) => (
         <SwiperSlide key={index}>
           <HeaderSlide isActive={activeIndex === index} />
         </SwiperSlide>

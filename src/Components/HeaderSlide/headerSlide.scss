@@ -1,49 +1,62 @@
 .headSlide {
   width: 100%;
   position: relative;
+  overflow: hidden;
+
   img {
     width: 100%;
     height: 100vh;
+    object-fit: cover;
   }
 
   .headSlideText {
-    max-width: 448px;
     position: absolute;
     left: 190px;
     bottom: 190px;
-    opacity: 0;
-    transform: translate(-20px);
+    max-width: 448px;
+    text-align: left;
+
     span,
     h2,
     button {
+      display: block;
       opacity: 0;
-      transform: translate(-25%);
-      animation-duration: 0.2s;
-      animation-timing-function: linear;
+      transform: translateX(-25%);
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
       animation-fill-mode: forwards;
       animation-name: none;
+      color: white;
     }
-    &.headAnimate {
-      .headSlideText {
-        span {
-          font-size: 14px;
-          margin-bottom: 10px;
-          animation-name: toBe;
-          animation-delay: 0s;
-        }
-        h2 {
-          font-size: 60px;
-          margin-bottom: 30px;
-          line-height: 70px;
-          animation-name: toBe;
-          animation-delay: 0.2s;
-        }
-        button {
-          margin-top: 40px;
-          padding: 15px 20px;
-          animation-name: toBe;
-          animation-delay: 0.3s;
-        }
+  }
+
+  &.headAnimate {
+    .headSlideText {
+      span {
+        font-size: 14px;
+        margin-bottom: 10px;
+        animation-name: toBe;
+        animation-delay: 0.2s;
+      }
+
+      h2 {
+        font-size: 60px;
+        margin-bottom: 30px;
+        line-height: 70px;
+        animation-name: toBe;
+        animation-delay: 0.4s;
+      }
+
+      button {
+        margin-top: 40px;
+        padding: 15px 25px;
+        font-size: 16px;
+        animation-name: toBe;
+        animation-delay: 0.6s;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
       }
     }
   }
@@ -52,10 +65,10 @@
 @keyframes toBe {
   from {
     opacity: 0;
-    transform: translate(-25%);
+    transform: translateX(-25%);
   }
   to {
     opacity: 1;
-    transform: translate(0px);
+    transform: translateX(0);
   }
 }
