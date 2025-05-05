@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "./cardSection.scss";
+import cartSectionImg from "../../../../src/Images/reklamImg.png";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
+import "./cardSection.scss";
 
 const CardSection = () => {
   const cardref = useRef(null);
@@ -36,7 +37,11 @@ const CardSection = () => {
   }, []);
   return (
     <section className="cardSection container">
-      <DublicateComponent ref={cardref} styleName={"cardItem"} />
+      <DublicateComponent
+        ref={cardref}
+        styleName={"cardItem"}
+        itemImg={cartSectionImg}
+      />
     </section>
   );
 };

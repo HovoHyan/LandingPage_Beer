@@ -1,6 +1,13 @@
 footer {
   width: 100%;
-  background-color: rgba(5, 188, 54, 0.82);
+  background: #cf7c40;
+  background: linear-gradient(
+    45deg,
+    rgba(207, 124, 64, 1) 0%,
+    rgba(161, 63, 24, 0.71) 50%,
+    rgba(143, 75, 54, 0.92) 100%
+  );
+
   padding: 60px 0;
   .footerContent {
     display: flex;
@@ -15,6 +22,9 @@ footer {
         width: 100%;
         li {
           margin-bottom: 14px;
+          a {
+            color: white;
+          }
         }
       }
       .settings {
@@ -22,15 +32,24 @@ footer {
         width: 100%;
         li {
           margin-bottom: 14px;
+          a {
+            color: white;
+          }
         }
       }
       .social {
         max-width: 555px;
         width: 100%;
         height: 100%;
+        color: white;
+        
       }
       .sticker {
         height: 100%;
+        img {
+          width: 84px;
+          mix-blend-mode: multiply;
+        }
       }
     }
     img {

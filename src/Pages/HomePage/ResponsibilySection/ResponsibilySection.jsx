@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import storyImg from "../../../Images/headerBackground.png";
+import responsImg from "../../../Images/responsSectionImg.png";
 import "./responsibilySection.scss";
 
 const ResponsibilySection = () => {
@@ -33,7 +33,7 @@ const ResponsibilySection = () => {
   return (
     <section className="responsSection container">
       <div className="handleImg" ref={resBlockRef}>
-        <img src={storyImg} alt="Respon" />
+        <img src={responsImg} alt="Respon" />
       </div>
       <div className="handleText" ref={resTextRef}>
         <span>ENJOY RESPONSIBLY</span>

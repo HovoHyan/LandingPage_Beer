@@ -1,11 +1,12 @@
 .headSlide {
   width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 
   img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -15,6 +16,7 @@
     bottom: 190px;
     max-width: 448px;
     text-align: left;
+    transition: all 0.4s;
 
     span,
     h2,

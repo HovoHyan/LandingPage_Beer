@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import product from "../../Images/homeBack2.png";
 import "./headerSlide.scss";
 
-const HeaderSlide = ({ isActive }) => {
+const HeaderSlide = ({ isActive, prodImg }) => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ const HeaderSlide = ({ isActive }) => {
 
   return (
     <div className={`headSlide ${animate ? "headAnimate" : ""}`}>
-      <img src={product} alt="Head" />
+      <img src={prodImg} alt="Head" />
       <div className="headSlideText">
         <span>Campaigns</span>
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</h2>

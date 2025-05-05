@@ -1,7 +1,8 @@
 import React from "react";
-import "./footer.scss";
 import { NavLink } from "react-router-dom";
 import logoImg from "../../Icons/logo.png";
+import sticker from "../../Images/sticker2.jpg"
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -56,7 +57,7 @@ const Footer = () => {
               <b>logos</b>
             </div>
             <div className="sticker">
-              <b>sticker</b>
+              <img src={sticker} alt="Sticker" />
             </div>
           </nav>
           <img src={logoImg} alt="Logo" />

@@ -1,27 +1,13 @@
 import React from "react";
-// import { useEffect } from "react";
-import "./homePage.scss";
 import HeaderSection from "./HeaderSection/HeaderSection";
 import StorySection from "./OurStorySection/StorySection";
 import SlideSection from "./SlideSection/SlideSection";
 import ResponsibilySection from "./ResponsibilySection/ResponsibilySection";
 import TextSection from "./TextSection/TextSection";
 import CardSection from "./CardSection/CardSection";
+import "./homePage.scss";
 
 const HomePage = () => {
-  // const topRef = useRef(null);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-  //     if (topRef) {
-  //       topRef.current.style.backgroundPositionY = `${scrollY * 0.1}px`;
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   return (
     <div className="homePage">
       <HeaderSection />

@@ -43,15 +43,7 @@
         left: 22px;
         bottom: 22px;
         padding: 32px;
-        background: transparent
-          radial-gradient(
-            closest-side at 50% 50%,
-            #51a025 0%,
-            #13670b 71%,
-            #005d1f 100%
-          )
-          0% 0% no-repeat padding-box;
-
+        background: linear-gradient(to bottom, #fff8c6, #f5d76e, #e4b94e);
         opacity: 0;
         transform: translateY(40px);
         transition: 0.8s ease, transform 0.8s ease, max-height 0.6s ease;

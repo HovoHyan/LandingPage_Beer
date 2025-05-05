@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
-// import storyImg from "../../../Images/headerBackground.png";
+import storyImg1 from "../../../../src/Images/ourStory1.png";
+import storyImg2 from "../../../../src/Images/ourStory2.png";
+import storyImg3 from "../../../../src/Images/ourStory3.png";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
 import "./storySection.scss";
 
@@ -8,7 +10,11 @@ const StorySection = () => {
   const boxItemRef2 = useRef(null);
   const boxItemRef3 = useRef(null);
 
-  const refsArr = [boxItemRef, boxItemRef2, boxItemRef3];
+  const storyArr = [
+    { itemRef: boxItemRef, itemImg: storyImg1 },
+    { itemRef: boxItemRef2, itemImg: storyImg2 },
+    { itemRef: boxItemRef3, itemImg: storyImg3 }
+  ];
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -47,8 +53,8 @@ const StorySection = () => {
     <section className="storySection container">
       <h2 className="sectionTitle">Our Story</h2>
       <div className="contentBox">
-        {refsArr.map((el, ind) => (
-          <DublicateComponent ref={el} styleName={"boxItems"} key={ind} />
+        {storyArr.map((el, ind) => (
+          <DublicateComponent ref={el.itemRef} styleName={"boxItems"} itemImg={el.itemImg} key={ind} />
         ))}
       </div>
     </section>

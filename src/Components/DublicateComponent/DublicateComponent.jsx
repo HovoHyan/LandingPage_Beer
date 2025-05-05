@@ -1,11 +1,10 @@
 import React from "react";
-import storyImg from "../../Images/headerBackground.png";
 import "./dublicateComponent.scss";
 
-const DublicateComponent = ({ ref, styleName }) => {
+const DublicateComponent = ({ ref, styleName, itemImg }) => {
   return (
     <div className={styleName} ref={ref}>
-      <img src={storyImg} alt="BackImage" />
+      <img src={itemImg} alt="BackImage" />
       <div className="textBox">
         <span className="textSpan">Our Title</span>
         <h3 className="textTitle">Lorem ipsum dolor sit.</h3>
