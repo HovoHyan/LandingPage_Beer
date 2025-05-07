@@ -19,7 +19,7 @@ const TextSection = () => {
     const onScroll = () => {
       const currentScrollY = window.scrollY;
 
-      showBoxWithText(textRef, 3000);
+      showBoxWithText(textRef, 2400);
 
       lastScrollY = currentScrollY;
     };

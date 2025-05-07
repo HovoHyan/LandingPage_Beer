@@ -37,7 +37,6 @@ const NavigationMenu = () => {
             <li><NavLink to="/about">About 379</NavLink></li>
             <li><NavLink to="/products">379 Beer Styles</NavLink></li>
             <li><NavLink to="/contact">Find Us</NavLink></li>
-            <li><NavLink to="/">Globus</NavLink></li>
           </ul>
           <div
             className={`burger ${isMenuOpen ? "active" : ""}`}

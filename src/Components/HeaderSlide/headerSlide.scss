@@ -64,6 +64,49 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .headSlide {
+    width: 100%;
+    .headSlideText {
+      left: 100px;
+      bottom: 200px;
+      max-width: 242px;
+    }
+    &.headAnimate {
+      .headSlideText {
+        h2 {
+          font-size: 50px;
+          line-height: 46px;
+        }
+
+        button {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .headSlide {
+    .headSlideText {
+      left: 38px;
+      bottom: 75px;
+    }
+    &.headAnimate {
+      .headSlideText {
+        h2 {
+          font-size: 40px;
+        }
+
+        button {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
 @keyframes toBe {
   from {
     opacity: 0;

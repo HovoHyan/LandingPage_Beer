@@ -43,14 +43,21 @@
         left: 22px;
         bottom: 22px;
         padding: 32px;
-        background: linear-gradient(to bottom, #fff8c6, #f5d76e, #e4b94e);
+        background: #cf7c40;
+        background: linear-gradient(
+          45deg,
+          rgba(207, 124, 64, 1) 0%,
+          rgba(161, 63, 24, 0.71) 50%,
+          rgba(143, 75, 54, 0.92) 100%
+        );
         opacity: 0;
         transform: translateY(40px);
         transition: 0.8s ease, transform 0.8s ease, max-height 0.6s ease;
         z-index: 9;
         overflow: visible;
         max-height: 100px;
-
+        color: white;
+        border-radius: 7px;
         &::before {
           content: "";
           position: absolute;
@@ -83,6 +90,7 @@
         &.active .textTitle {
           opacity: 1;
           transform: translateY(0);
+          letter-spacing: 1.5px;
         }
 
         .moreText {
@@ -91,6 +99,7 @@
           transition: opacity 0.5s ease, transform 0.5s ease;
           display: block;
           margin-top: 12px;
+          letter-spacing: 1.5px;
         }
       }
     }
@@ -116,6 +125,7 @@
   .storySection {
     .contentBox {
       display: grid;
+      justify-content: center;
       gap: 10px;
       grid-template-columns: repeat(2, 473.5px);
       grid-template-rows: repeat(5, 189.4px);
@@ -133,6 +143,53 @@
         transition: 1.2s ease;
         grid-column: 2 / span 1;
         grid-row: 4 / span 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .storySection {
+    .contentBox {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 164.5px);
+      grid-template-rows: repeat(5, 77.4px);
+      .boxItems {
+        .textBox {
+          max-width: 60%;
+          height: auto;
+          padding: 9px;
+          .textSpan,
+          .moreText {
+            font-size: 10px;
+          }
+          .textTitle {
+            font-size: 18px;
+          }
+        }
+      }
+      .boxItems:nth-child(1) {
+        .textBox {
+          .moreText {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+      }
+      .boxItems:nth-child(2) {
+        .textBox {
+          .moreText {
+            display: none;
+          }
+        }
+      }
+      .boxItems:nth-child(3) {
+        .textBox {
+          .moreText {
+            display: none;
+          }
+        }
       }
     }
   }

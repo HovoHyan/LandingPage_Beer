@@ -9,8 +9,7 @@ const DublicateComponent = ({ ref, styleName, itemImg }) => {
         <span className="textSpan">Our Title</span>
         <h3 className="textTitle">Lorem ipsum dolor sit.</h3>
         <p className="moreText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-          accusantium ipsa quos, error ut sed.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
     </div>

@@ -71,3 +71,21 @@
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .responsSection {
+    margin-top: 50px;
+    row-gap: 20px;
+    .handleImg {
+      min-width: 375px;
+      order: 1;
+      img {
+        height: 375px;
+      }
+    }
+    .handleText {
+      padding: 0 36px;
+    }
+  }
+}
+
