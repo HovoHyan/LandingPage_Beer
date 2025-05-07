@@ -1,6 +1,7 @@
 {
   "name": "landing-page",
   "private": true,
+  "homepage": "https://hovohyan.github.io/LandinPage_Beer/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
