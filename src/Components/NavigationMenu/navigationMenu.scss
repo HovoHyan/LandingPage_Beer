@@ -53,7 +53,8 @@ $liTextHover: #ababab;
         border-bottom: 2px solid $liTextColor;
       }
       a {
-        color: $liTextColor;
+        // color: $liTextColor;
+        color: red;
         font-size: 22px;
         letter-spacing: 2px;
         transition: 0.4s ease;
