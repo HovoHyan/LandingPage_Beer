@@ -13,7 +13,7 @@ const StorySection = () => {
   const storyArr = [
     { itemRef: boxItemRef, itemImg: storyImg1 },
     { itemRef: boxItemRef2, itemImg: storyImg2 },
-    { itemRef: boxItemRef3, itemImg: storyImg3 }
+    { itemRef: boxItemRef3, itemImg: storyImg3 },
   ];
 
   useEffect(() => {
@@ -50,11 +50,16 @@ const StorySection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section className="storySection container">
+    <section className="storySection container" id="storyPart">
       <h2 className="sectionTitle">Our Story</h2>
       <div className="contentBox">
         {storyArr.map((el, ind) => (
-          <DublicateComponent ref={el.itemRef} styleName={"boxItems"} itemImg={el.itemImg} key={ind} />
+          <DublicateComponent
+            ref={el.itemRef}
+            styleName={"boxItems"}
+            itemImg={el.itemImg}
+            key={ind}
+          />
         ))}
       </div>
     </section>

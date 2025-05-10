@@ -28,7 +28,7 @@ const TextSection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section className="textSection container" ref={textRef}>
+    <section className="textSection container" ref={textRef} id="textPart">
       <span>CAMPAIGNS & SPONSORSHIPS</span>
       <h3>The Magic of Heineken®</h3>
       <p>

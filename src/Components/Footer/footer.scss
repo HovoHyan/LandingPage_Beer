@@ -17,23 +17,30 @@ footer {
     .footerNav {
       width: 100%;
       display: flex;
+      justify-content: space-between;
+      color: white;
       .story {
         max-width: 555px;
         width: 100%;
         li {
           margin-bottom: 14px;
-          a {
-            color: white;
-          }
         }
       }
       .settings {
         max-width: 555px;
         width: 100%;
-        li {
-          margin-bottom: 14px;
-          a {
+        display: flex;
+        column-gap: 50px;
+        a {
+          svg {
+            transition: all 0.4s;
+            font-size: 32px;
             color: white;
+            position: relative;
+          }
+          &:hover svg {
+            font-size: 38px;
+            color: #cf7c40;
           }
         }
       }
@@ -42,7 +49,28 @@ footer {
         width: 100%;
         height: 100%;
         color: white;
-        
+
+        p {
+          margin: 0.3rem 0;
+          font-size: 0.95rem;
+
+          strong {
+            color: #f0c040;
+            font-weight: 600;
+          }
+        }
+
+        a {
+          color: #ddd;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: #f0c040;
+            transform: translateX(4px);
+          }
+        }
       }
       .sticker {
         height: 100%;

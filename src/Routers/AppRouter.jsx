@@ -14,6 +14,8 @@ const AppRouter = () => {
         <Route path="products" element={<ProductsPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="find" element={<h1>Find Us</h1>} />
+        <Route path="event" element={<h1>Events</h1>} />
       </Route>
     </Routes>
   );

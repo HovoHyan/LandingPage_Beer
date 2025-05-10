@@ -48,18 +48,6 @@
         animation-name: toBe;
         animation-delay: 0.4s;
       }
-
-      button {
-        margin-top: 40px;
-        padding: 15px 25px;
-        font-size: 16px;
-        animation-name: toBe;
-        animation-delay: 0.6s;
-        border: none;
-        background-color: #000;
-        color: #fff;
-        cursor: pointer;
-      }
     }
   }
 }
@@ -78,10 +66,6 @@
           font-size: 50px;
           line-height: 46px;
         }
-
-        button {
-          margin-top: 30px;
-        }
       }
     }
   }
@@ -97,10 +81,6 @@
       .headSlideText {
         h2 {
           font-size: 40px;
-        }
-
-        button {
-          margin-top: 30px;
         }
       }
     }
