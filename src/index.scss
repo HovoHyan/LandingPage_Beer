@@ -15,29 +15,27 @@ li {
 
 // Container
 .container {
-  max-width: 1920px;
   width: 100%;
-  margin: auto;
   padding: 0 96px;
 }
 
 @media screen and (max-width: 1280px) {
   .container {
-    max-width: 1280px;
+    width: 100%;
     padding: 0 64px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    max-width: 1024px;
+    width: 100%;
     padding: 0 38px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .container {
-    max-width: 375px;
+    width: 100%;
     padding: 0 18px;
   }
 }

@@ -1,32 +1,33 @@
 import React, { useEffect, useRef } from "react";
+import throttle from "lodash.throttle";
 import "./textSection.scss";
 
 const TextSection = () => {
   const textRef = useRef(null);
+
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let shownBoxes = new Set();
+    const shown = new Set();
 
-    const showBoxWithText = (ref, threshold) => {
-      if (!ref.current || window.scrollY < threshold || shownBoxes.has(ref))
-        return;
+    const showBoxWithText = (ref) => {
+      if (!ref.current || shown.has(ref)) return;
 
-      shownBoxes.add(ref);
-
-      ref.current.style.cssText = `transform: translateY(0); opacity: 1;`;
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        shown.add(ref);
+        ref.current.style.transform = "translateY(0)";
+        ref.current.style.opacity = "1";
+      }
     };
 
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      showBoxWithText(textRef, 2400);
-
-      lastScrollY = currentScrollY;
-    };
+    const onScroll = throttle(() => {
+      showBoxWithText(textRef);
+    }, 200);
 
     window.addEventListener("scroll", onScroll);
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
     <section className="textSection container" ref={textRef}>
       <span>CAMPAIGNS & SPONSORSHIPS</span>

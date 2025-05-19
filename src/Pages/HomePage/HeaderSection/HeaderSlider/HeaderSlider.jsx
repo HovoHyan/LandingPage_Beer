@@ -30,7 +30,11 @@ const HeaderSlider = () => {
       speed={1000}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
-      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+      onSlideChange={(swiper) => {
+        if (swiper.realIndex !== activeIndex) {
+          setActiveIndex(swiper.realIndex);
+        }
+      }}
     >
       {slideImages.map((slideImg, index) => (
         <SwiperSlide key={index}>

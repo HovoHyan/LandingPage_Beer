@@ -36,13 +36,17 @@ const SliderContent = () => {
   return (
     <Swiper
       autoplay={{
-        delay: 300000,
+        delay: 3000,
       }}
       loop={true}
       speed={1500}
       modules={[Autoplay]}
       className="mySwiper"
-      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+      onSlideChange={(swiper) => {
+        if (swiper.realIndex !== activeIndex) {
+          setActiveIndex(swiper.realIndex);
+        }
+      }}
     >
       {products.map((slider, index) => (
         <SwiperSlide key={index}>

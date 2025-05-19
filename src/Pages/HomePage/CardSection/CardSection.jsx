@@ -1,44 +1,47 @@
 import React, { useEffect, useRef } from "react";
+import throttle from "lodash.throttle";
 import cartSectionImg from "../../../../src/Images/reklamImg.png";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
 import "./cardSection.scss";
 
 const CardSection = () => {
-  const cardref = useRef(null);
+  const cardRef = useRef(null);
+
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let shownBoxes = new Set();
+    const shown = new Set();
 
-    const showBoxWithText = (ref, threshold) => {
-      if (!ref.current || window.scrollY < threshold || shownBoxes.has(ref))
-        return;
+    const showBoxWithText = (ref) => {
+      if (!ref.current || shown.has(ref)) return;
 
-      shownBoxes.add(ref);
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        shown.add(ref);
 
-      ref.current.style.cssText = `transform: translateY(-20px); opacity: 1;`;
+        ref.current.style.transform = "translateY(-20px)";
+        ref.current.style.opacity = "1";
 
-      setTimeout(() => {
-        const textBox = ref.current.querySelector(".textBox");
-        if (textBox) {
-          textBox.classList.add("active");
-        }
-      }, 1000);
+        setTimeout(() => {
+          const textBox = ref.current.querySelector(".textBox");
+          if (textBox) {
+            textBox.classList.add("active");
+          }
+        }, 500);
+      }
     };
 
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
+    const onScroll = throttle(() => {
+      showBoxWithText(cardRef);
+    }, 200);
 
-      showBoxWithText(cardref, 3500);
-
-      lastScrollY = currentScrollY;
-    };
     window.addEventListener("scroll", onScroll);
+    onScroll(); // для начальной проверки
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
     <section className="cardSection container">
       <DublicateComponent
-        ref={cardref}
+        ref={cardRef}
         styleName={"cardItem"}
         itemImg={cartSectionImg}
       />

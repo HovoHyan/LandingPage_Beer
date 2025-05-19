@@ -3,6 +3,7 @@ import storyImg1 from "../../../../src/Images/ourStory1.png";
 import storyImg2 from "../../../../src/Images/ourStory2.png";
 import storyImg3 from "../../../../src/Images/ourStory3.png";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
+import throttle from "lodash.throttle";
 import "./storySection.scss";
 
 const StorySection = () => {
@@ -17,36 +18,32 @@ const StorySection = () => {
   ];
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let shownBoxes = new Set();
+    const shownBoxes = new Set();
 
-    const showBoxWithText = (ref, threshold) => {
-      if (!ref.current || window.scrollY < threshold || shownBoxes.has(ref))
-        return;
+    const showBoxWithText = (ref) => {
+      if (!ref.current || shownBoxes.has(ref)) return;
 
-      shownBoxes.add(ref);
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        shownBoxes.add(ref);
 
-      ref.current.style.cssText = `transform: translateY(-20px); opacity: 1;`;
+        ref.current.style.cssText = `transform: translateY(-20px); opacity: 1;`;
 
-      setTimeout(() => {
-        const textBox = ref.current.querySelector(".textBox");
-        if (textBox) {
-          textBox.classList.add("active");
-        }
-      }, 1000);
+        setTimeout(() => {
+          const textBox = ref.current.querySelector(".textBox");
+          if (textBox) textBox.classList.add("active");
+        }, 500);
+      }
     };
 
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      showBoxWithText(boxItemRef, 120);
-      showBoxWithText(boxItemRef2, 120);
-      showBoxWithText(boxItemRef3, 450);
-
-      lastScrollY = currentScrollY;
-    };
+    const onScroll = throttle(() => {
+      showBoxWithText(boxItemRef);
+      showBoxWithText(boxItemRef2);
+      showBoxWithText(boxItemRef3);
+    }, 200); // throttle scroll every 200ms
 
     window.addEventListener("scroll", onScroll);
+    onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (

@@ -1,6 +1,6 @@
 .textSection {
   max-width: 1200px;
-  padding: 80px 0 0;
+  padding-top: 80px;
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.5s;
@@ -24,7 +24,7 @@
 @media screen and (max-width: 1024px) {
   .textSection {
     width: 100vh;
-    padding: 60px 0 0;
+    padding-top: 60px;
     margin-bottom: 80px;
     span {
       font-size: 12px;
