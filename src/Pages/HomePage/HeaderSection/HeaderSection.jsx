@@ -4,7 +4,7 @@ import "./headerSection.scss";
 
 const HeaderSection = () => {
   return (
-    <section className="headerSection" >
+    <section className="headerSection">
       <HeaderSlider />
     </section>
   );

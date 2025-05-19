@@ -63,27 +63,27 @@
         font-size: 40px;
         font-weight: 400;
         animation-name: toBe;
-        animation-delay: .3s;
+        animation-delay: 1.3s;
       }
 
       p {
         line-height: 1.8;
         font-size: 18px;
         animation-name: toBe;
-        animation-delay: 0.5s;
+        animation-delay: 1.5s;
       }
 
       button {
         margin-top: 40px;
         padding: 15px 20px;
         animation-name: toBe;
-        animation-delay: 0.7s;
+        animation-delay: 1.7s;
       }
     }
 
     a {
       animation-name: toBeLink;
-      animation-delay: 0.9s;
+      animation-delay: 1.9s;
     }
   }
 }
@@ -133,30 +133,24 @@
     &.animate {
       .textPart {
         h2 {
-          margin-bottom: 20px;
-          font-size: 40px;
           animation-name: toBe;
-          animation-delay: 0s;
+          animation-delay: 1.3s;
         }
 
         p {
-          line-height: 1.8;
-          font-size: 18px;
           animation-name: toBe;
-          animation-delay: 0.1s;
+          animation-delay: 1.5
         }
 
         button {
-          margin-top: 40px;
-          padding: 15px 20px;
           animation-name: toBe;
-          animation-delay: 0.2s;
+          animation-delay: 1.7s;
         }
       }
 
       a {
         animation-name: toBeLink;
-        animation-delay: 0.4s;
+        animation-delay: 1.9s;
       }
     }
   }

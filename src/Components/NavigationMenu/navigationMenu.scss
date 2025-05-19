@@ -40,13 +40,15 @@ $liTextHover: #ababab;
   }
 
   ul.navLinks {
+    height: 60px;
     display: flex;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 60px;
 
     li {
-      text-align: center;
-      padding: 53px 20px 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
       transition: all 0.7s;
       border-bottom: 2px solid transparent;
       &:hover {

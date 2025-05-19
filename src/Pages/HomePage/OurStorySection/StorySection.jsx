@@ -50,7 +50,7 @@ const StorySection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section className="storySection container" id="storyPart">
+    <section className="storySection container">
       <h2 className="sectionTitle">Our Story</h2>
       <div className="contentBox">
         {storyArr.map((el, ind) => (

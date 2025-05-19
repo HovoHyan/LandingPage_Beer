@@ -36,7 +36,7 @@ const CardSection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section className="cardSection container" id="cardPart">
+    <section className="cardSection container">
       <DublicateComponent
         ref={cardref}
         styleName={"cardItem"}
