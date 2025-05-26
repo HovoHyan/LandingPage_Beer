@@ -2,116 +2,116 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  .sectionTitle {
-    font-size: 36px;
-    margin-bottom: 16px;
-    color: #b83923;
-  }
-  .contentBox {
-    max-width: 1713px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(12, 124.5px);
-    grid-template-rows: repeat(2, 313.5px);
-    .boxItems {
-      overflow: hidden;
-      transform: translateY(20px);
-      opacity: 0;
-      position: relative;
-      img {
-        transition: all 0.5s;
-        width: 100%;
-        height: 100%;
-        filter: grayscale(50%);
-      }
-      &:hover {
+  padding: 0 96px;
+  .storyHandler {
+    margin: auto;
+    .sectionTitle {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: #b83923;
+    }
+    .contentBox {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(12, 125px);
+      grid-template-rows: repeat(2, 320px);
+      .boxItems {
+        overflow: hidden;
+        transform: translateY(20px);
+        opacity: 0;
+        position: relative;
         img {
-          transform: scale(1.1);
-          filter: none;
+          transition: all 0.5s;
+          width: 100%;
+          height: 100%;
+          filter: grayscale(50%);
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+            filter: none;
+          }
+          .textBox {
+            max-height: 300px;
+            .moreText {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
         }
         .textBox {
-          max-height: 300px;
-          .moreText {
+          position: absolute;
+          max-width: 450px;
+          max-height: 80px;
+          left: 22px;
+          bottom: 22px;
+          padding: 22px 32px 32px;
+          background: #b8392394;
+          opacity: 0;
+          transform: translateY(40px);
+          transition: 0.8s ease, transform 0.8s ease, max-height 0.6s ease;
+          z-index: 9;
+          overflow: visible;
+          color: white;
+          border-radius: 7px;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+            transition: height 0.6s ease-in-out;
+          }
+
+          &.active {
             opacity: 1;
             transform: translateY(0);
+
+            &::before {
+              height: 100%;
+            }
+          }
+
+          .textTitle {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+          }
+
+          &.active .textTitle {
+            opacity: 1;
+            transform: translateY(0);
+            letter-spacing: 1.5px;
+          }
+
+          .moreText {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+            display: block;
+            margin-top: 12px;
+            letter-spacing: 1.5px;
           }
         }
       }
-      .textBox {
-        position: absolute;
-        max-width: 288px;
-        height: auto;
-        left: 22px;
-        bottom: 22px;
-        padding: 22px 32px 32px;
-        background: #b8392394;
-        opacity: 0;
-        transform: translateY(40px);
-        transition: 0.8s ease, transform 0.8s ease, max-height 0.6s ease;
-        z-index: 9;
-        overflow: visible;
-        max-height: 100px;
-        color: white;
-        border-radius: 7px;
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 0%;
-          background-color: rgba(0, 0, 0, 0.2);
-          z-index: -1;
-          transition: height 0.6s ease-in-out;
-        }
-
-        &.active {
-          opacity: 1;
-          transform: translateY(0);
-
-          &::before {
-            height: 100%;
-          }
-        }
-
-        .textSpan,
-        .textTitle {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: 0.5s ease 0.4s, transform 0.5s ease 0.4s;
-        }
-
-        &.active .textSpan,
-        &.active .textTitle {
-          opacity: 1;
-          transform: translateY(0);
-          letter-spacing: 1.5px;
-        }
-
-        .moreText {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease, transform 0.5s ease;
-          display: block;
-          margin-top: 12px;
-          letter-spacing: 1.5px;
-        }
+      .boxItems:nth-child(1) {
+        transition: 0.8s ease;
+        grid-column: 1 / span 8;
+        grid-row: 1 / 3;
       }
-    }
-    .boxItems:nth-child(1) {
-      transition: 0.8s ease;
-      grid-column: 1 / span 8;
-      grid-row: 1 / 3;
-    }
-    .boxItems:nth-child(2) {
-      transition: 1s ease;
-      grid-column: 9 / span 4;
-      grid-row: 1/2;
-    }
-    .boxItems:nth-child(3) {
-      transition: 1.2s ease;
-      grid-column: 9 / span 4;
-      grid-row: 2/3;
+      .boxItems:nth-child(2) {
+        transition: 1s ease;
+        grid-column: 9 / span 4;
+        grid-row: 1/2;
+      }
+      .boxItems:nth-child(3) {
+        transition: 1.2s ease;
+        grid-column: 9 / span 4;
+        grid-row: 2/3;
+      }
     }
   }
 }
@@ -124,6 +124,11 @@
       gap: 10px;
       grid-template-columns: repeat(2, 473.5px);
       grid-template-rows: repeat(5, 189.4px);
+      .boxItems {
+        .textBox {
+          max-width: 380px;
+        }
+      }
       .boxItems:nth-child(1) {
         transition: 0.8s ease;
         grid-column: 1 / span 2;
@@ -152,38 +157,25 @@
       grid-template-rows: repeat(5, 77.4px);
       .boxItems {
         .textBox {
-          max-width: 60%;
-          height: auto;
+          max-width: 85%;
+          max-height: 40px;
           padding: 9px;
-          .textSpan,
           .moreText {
             font-size: 10px;
           }
           .textTitle {
-            font-size: 18px;
-          }
-        }
-      }
-      .boxItems:nth-child(1) {
-        .textBox {
-          .moreText {
-            opacity: 1;
-            transform: translate(0);
+            font-size: 14px;
           }
         }
       }
       .boxItems:nth-child(2) {
         .textBox {
-          .moreText {
-            display: none;
-          }
+          display: none;
         }
       }
       .boxItems:nth-child(3) {
         .textBox {
-          .moreText {
-            display: none;
-          }
+          display: none;
         }
       }
     }

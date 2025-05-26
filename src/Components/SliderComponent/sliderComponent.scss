@@ -1,22 +1,29 @@
 .slideComponent {
-  min-height: 736px;
+  width: 100%;
+  min-height: 780px;
   max-height: 800px;
-  padding-bottom: 64px;
   position: relative;
   display: flex;
   align-items: center;
   text-align: left;
-  background-color: #fef5e1;
+  // background-color: rgba(184, 57, 35, 0.623);
+  // background-color: rgba(184, 57, 35, 0.5803921569);
+  // background: #b8392394;
+  // background: rgba(184, 57, 35, 0.5803921569);
+  // background-color: #b83923;
+  background-color: #b83923f1;
 
   .slider {
-    width: 1280px;
+    width: 1728px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: end;
+    column-gap: 600px;
 
     .textPart {
-      max-width: 320px;
+      max-width: 420px;
+      button,
       h2,
       p {
         opacity: 0;
@@ -25,17 +32,19 @@
         animation-timing-function: linear;
         animation-fill-mode: forwards;
         animation-name: none;
+        color: white;
       }
     }
 
     img {
       width: 465px;
-      height: 100%;
+      height: 95%;
       position: absolute;
       left: 54%;
       right: auto;
-      top: 0;
-      transform: translate(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 4px;
     }
 
     a {
@@ -47,6 +56,8 @@
       animation-timing-function: linear;
       animation-fill-mode: forwards;
       animation-name: none;
+      font-size: 20px;
+      color: white;
 
       svg {
         font-size: 28px;
@@ -71,6 +82,25 @@
         animation-name: toBe;
         animation-delay: 1.5s;
       }
+      button {
+        margin-top: 20px;
+        cursor: pointer;
+        padding: 12px 24px;
+        border-radius: 99px;
+        border: 3px solid rgb(184, 57, 35);
+        color: rgb(184, 57, 35);
+        transition: all 0.8s;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 18px;
+        &:hover {
+          border-color: white;
+          color: white;
+          background-color: rgb(184, 57, 35);
+        }
+        animation-name: toBe;
+        animation-delay: 1.7s;
+      }
     }
 
     a {
@@ -88,7 +118,7 @@
       max-width: 1024px;
       align-items: center;
       flex-wrap: wrap;
-      padding: 0 64px;
+      // padding: 0 64px;
 
       .textPart {
         max-width: 320px;
@@ -136,12 +166,12 @@
     align-items: start;
     justify-content: center;
     margin-top: 30px;
-    
+
     .slider {
       margin: 0;
       width: 405px;
       height: 469px;
-      padding: 0;
+      padding: 32px 0 0 0;
       row-gap: 120px;
       column-gap: 100px;
 
@@ -151,8 +181,10 @@
       }
 
       img {
-        width: 243px;
-        height: 365px;
+        width: 160px;
+        height: 320px;
+        right: 0;
+        top: 0;
         position: absolute;
       }
 

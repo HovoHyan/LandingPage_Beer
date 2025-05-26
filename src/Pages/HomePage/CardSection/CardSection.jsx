@@ -34,12 +34,12 @@ const CardSection = () => {
     }, 200);
 
     window.addEventListener("scroll", onScroll);
-    onScroll(); // для начальной проверки
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <section className="cardSection container">
+    <section className="cardSection">
       <DublicateComponent
         ref={cardRef}
         styleName={"cardItem"}

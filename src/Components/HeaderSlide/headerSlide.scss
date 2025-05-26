@@ -13,14 +13,12 @@
   .headSlideText {
     position: absolute;
     left: 190px;
-    bottom: 190px;
-    max-width: 448px;
+    bottom: 28%;
+    max-width: 500px;
     text-align: left;
     transition: all 0.4s;
 
-    span,
-    h2,
-    button {
+    h2 {
       display: block;
       opacity: 0;
       transform: translateX(-25%);
@@ -34,12 +32,6 @@
 
   &.headAnimate {
     .headSlideText {
-      span {
-        font-size: 14px;
-        margin-bottom: 10px;
-        animation-name: toBe;
-        animation-delay: 0.2s;
-      }
 
       h2 {
         font-size: 60px;

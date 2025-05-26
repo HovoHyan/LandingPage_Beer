@@ -1,14 +1,11 @@
 .textSection {
   max-width: 1200px;
-  padding-top: 80px;
-  transform: translateY(20px);
+  // padding-top: 80px;
+  padding: 30px 96px;
   opacity: 0;
+  transform: translateY(20px);
   transition: all 0.5s;
-  margin-bottom: 80px;
-  span {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+  margin: 80px 0 40px;
   h3 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -26,9 +23,6 @@
     width: 100vh;
     padding-top: 60px;
     margin-bottom: 80px;
-    span {
-      font-size: 12px;
-    }
     h3 {
       font-size: 30px;
       margin-bottom: 10px;
@@ -40,16 +34,12 @@
     }
   }
 }
-
 
 @media screen and (max-width: 375px) {
   .textSection {
     width: 100%;
     padding: 60px 36px 0;
     margin-bottom: 50px;
-    span {
-      font-size: 12px;
-    }
     h3 {
       font-size: 30px;
       margin-bottom: 10px;
@@ -61,4 +51,3 @@
     }
   }
 }
-

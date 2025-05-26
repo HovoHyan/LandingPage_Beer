@@ -29,15 +29,11 @@ const TextSection = () => {
   }, []);
 
   return (
-    <section className="textSection container" ref={textRef}>
-      <span>CAMPAIGNS & SPONSORSHIPS</span>
-      <h3>The Magic of Heineken®</h3>
+    <section className="textSection" ref={textRef}>
+      <h3>The Magic of Dragon </h3>
       <p>
-        Tapping from our rich history and proud heritage, our campaigns tell the
-        developing tale of our brand. The Heineken® voice is witty, intelligent
-        and speaks in a refreshing tone. Our vision is positive and yes, a bit
-        cheeky at times. One thing is for sure, each campaign is a 100%
-        Heineken®. Enjoy!
+        And so our story continues: the dragon of 379 preserves and develops the
+        heritage of brewing, which comes from our land, our water, our essence.
       </p>
     </section>
   );

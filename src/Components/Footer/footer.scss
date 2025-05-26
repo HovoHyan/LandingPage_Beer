@@ -1,19 +1,21 @@
 footer {
   width: 100%;
-  background: #cf7c40;
+  padding: 60px 96px;
+  // background: #cf7c40;
   background: linear-gradient(
     45deg,
-    rgba(207, 124, 64, 1) 0%,
-    rgba(161, 63, 24, 0.71) 50%,
-    rgba(143, 75, 54, 0.92) 100%
+    rgb(207, 83, 33) 0%,
+    rgba(161, 63, 24, 0.89) 50%,
+    rgb(204, 81, 44) 100%
   );
-
-  padding: 60px 0;
+  // background-color: #b83923;
   .footerContent {
+    max-width: 1700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 50px;
+    margin: auto;
     .footerNav {
       width: 100%;
       display: flex;
@@ -27,8 +29,8 @@ footer {
         }
       }
       .settings {
-        max-width: 555px;
-        width: 100%;
+        // max-width: 555px;
+        // width: 100%;
         display: flex;
         column-gap: 50px;
         a {

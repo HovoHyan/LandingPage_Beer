@@ -3,20 +3,23 @@ import { NavLink } from "react-router-dom";
 import logoImg from "../../Icons/logo.png";
 import sticker from "../../Images/sticker2.jpg";
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
-import { MdOutlineAttachEmail } from "react-icons/md";
+import { FaYoutube, FaLinkedinIn, FaTiktok } from "react-icons/fa";
+
 import "./footer.scss";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
         <div className="footerContent">
           <nav className="footerNav">
             <ul className="story">
               <li>Head Info</li>
               <li>Our Story</li>
-              <li>Our Products</li>
-              <li>Description</li>
+              <li>About 379</li>
+              <li>Products</li>
+              <li>View Product</li>
+              <li>The Magic of Dragon</li>
+              <li>Events</li>
             </ul>
             <div className="social">
               <p>
@@ -31,34 +34,47 @@ const Footer = () => {
             </div>
             <div className="settings">
               <NavLink
-                to={"https://facebook.com"}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaSquareFacebook />
-              </NavLink>
-              <NavLink
-                to={"https://instagram.com"}
+                to={"https://www.instagram.com/379_brewingcompany?igsh=MTZ1ZGgxeDNwd3R4eQ=="}
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaInstagram />
               </NavLink>
               <NavLink
-                to={"https://linkedin.com"}
+                to={" https://www.facebook.com/share/16PNvZTM7R/?mibextid=wwXIfr"}
                 target="_blank"
                 rel="noreferrer"
               >
-                <MdOutlineAttachEmail />
+                <FaSquareFacebook />
+              </NavLink>
+              <NavLink
+                to={"https://www.tiktok.com/@379_brewingcompany?_t=ZS-8wUGi1Z1ZIO&_r=1"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTiktok />
+              </NavLink>
+              <NavLink
+                to={"https://www.linkedin.com/company/379-brewing-company/"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedinIn />
+              </NavLink>
+              <NavLink
+                to={"https://youtube.com/@379brewingcompany?si=1XVDxxRnlX5zVsjb"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaYoutube />
               </NavLink>
             </div>
-            <div className="sticker">
+            {/* <div className="sticker">
               <img src={sticker} alt="Sticker" />
-            </div>
+            </div> */}
           </nav>
           <img src={logoImg} alt="Logo" />
         </div>
-      </div>
     </footer>
   );
 };

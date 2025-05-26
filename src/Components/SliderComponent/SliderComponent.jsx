@@ -14,10 +14,11 @@ const SliderComponent = ({ isActive, boxTitle, boxText, prodImg }) => {
 
   return (
     <div className={`slideComponent ${animateClass} container`}>
-      <div className="slider container">
+      <div className="slider">
         <div className="textPart">
           <h2>{boxTitle}</h2>
           <p>{boxText}</p>
+          <button>Where to buy</button>
         </div>
         <img src={prodImg} alt="Product" className="productImg" />
         <NavLink to={"/"}>

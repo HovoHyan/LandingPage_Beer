@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./headerSlide.scss";
 
-const HeaderSlide = ({ isActive, prodImg }) => {
+const HeaderSlide = ({ isActive, prodImg, slideText }) => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -18,8 +18,7 @@ const HeaderSlide = ({ isActive, prodImg }) => {
     <div className={`headSlide ${animate ? "headAnimate" : ""}`}>
       <img src={prodImg} alt="Head" />
       <div className="headSlideText">
-        <span>Campaigns</span>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</h2>
+        <h2>{slideText}</h2>
       </div>
     </div>
   );

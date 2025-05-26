@@ -1,0 +1,86 @@
+.about379 {
+  padding: 30px 96px;
+  margin-top: 90px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 850px);
+  grid-template-rows: repeat(4, 580px);
+  background-color: #b83923f1;
+  //   gap: 25px;
+  .aboutGridBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    // background-color: rgba(184, 57, 35, 0.623);
+    // background: rgba(184, 57, 35, 0.5803921569);
+    border: none;
+    color: white;
+    // padding: 25px 180px 25px 80px;
+    row-gap: 25px;
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+    button {
+      cursor: pointer;
+      padding: 12px 24px;
+      border-radius: 99px;
+      border: 3px solid rgb(184, 57, 35);
+      color: rgb(184, 57, 35);
+      transition: all 0.8s;
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 18px;
+      &:hover {
+        border-color: white;
+        color: white;
+        background-color: rgb(184, 57, 35);
+      }
+    }
+  }
+  .aboutGridBox:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    padding: 0 180px 0 0;
+  }
+  .aboutGridBox:nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding: 0 180px 0 0;
+  }
+  .aboutGridBox:nth-child(3) {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background-image: url("../../Images/headSlideImg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutGridBox:nth-child(4) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    background-image: url("../../Images/headSlideImg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutGridBox:nth-child(5) {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    padding: 0 180px 0 80px;
+  }
+  .aboutGridBox:nth-child(6) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    padding: 0 180px 0 0;
+  }
+  .aboutGridBox:nth-child(7) {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    background-image: url("../../Images/headSlideImg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
