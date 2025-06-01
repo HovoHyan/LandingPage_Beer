@@ -13,7 +13,7 @@ const SliderComponent = ({ isActive, boxTitle, boxText, prodImg }) => {
   }, [isActive]);
 
   return (
-    <div className={`slideComponent ${animateClass} container`}>
+    <div className={`slideComponent ${animateClass}`}>
       <div className="slider">
         <div className="textPart">
           <h2>{boxTitle}</h2>
@@ -21,7 +21,7 @@ const SliderComponent = ({ isActive, boxTitle, boxText, prodImg }) => {
           <button>Where to buy</button>
         </div>
         <img src={prodImg} alt="Product" className="productImg" />
-        <NavLink to={"/"}>
+        <NavLink to={"/products"}>
           See all our products
           <MdKeyboardArrowRight />
         </NavLink>

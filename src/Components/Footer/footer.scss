@@ -33,7 +33,9 @@ footer {
         // width: 100%;
         display: flex;
         column-gap: 50px;
+        overflow: hidden;
         a {
+          width: 45px;
           svg {
             transition: all 0.4s;
             font-size: 32px;

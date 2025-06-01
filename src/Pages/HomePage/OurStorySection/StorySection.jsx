@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import storyImg1 from "../../../../src/Images/ourStory1.png";
 import storyImg2 from "../../../../src/Images/ourStory2.png";
 import storyImg3 from "../../../../src/Images/ourStory3.png";
+// import {} from "../../../Data/storyData"
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
 import throttle from "lodash.throttle";
 import "./storySection.scss";
@@ -47,10 +48,12 @@ const StorySection = () => {
 
         ref.current.style.cssText = `transform: translateY(-20px); opacity: 1;`;
 
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           const textBox = ref.current.querySelector(".textBox");
-          if (textBox) textBox.classList.add("active");
-        }, 500);
+          if (textBox) {
+            textBox.classList.add("active");
+          }
+        });
       }
     };
 

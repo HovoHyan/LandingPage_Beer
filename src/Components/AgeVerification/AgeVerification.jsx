@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import logo from "../../Icons/logo.png"
 import "./ageVerification.scss";
+
 
 
 const AgeVerification = () => {
@@ -18,13 +20,14 @@ const AgeVerification = () => {
 
   return (
     <div className="age-verification">
-      <h1>Դուք 18 տարեկան և ավել ե՞ք</h1>
+      <img src={logo} alt="Logo" />
+      <h1>Are you of an age to<span> FEEL THE DRAGONS POWER</span> </h1>
       <div className="buttons">
         <button className="yes" onClick={enterSite}>
-          Այո
+          Yes
         </button>
         <button className="no" onClick={denyAccess}>
-          Ոչ
+          No
         </button>
       </div>
     </div>

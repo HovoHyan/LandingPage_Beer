@@ -6,12 +6,8 @@
   display: flex;
   align-items: center;
   text-align: left;
-  // background-color: rgba(184, 57, 35, 0.623);
-  // background-color: rgba(184, 57, 35, 0.5803921569);
-  // background: #b8392394;
-  // background: rgba(184, 57, 35, 0.5803921569);
-  // background-color: #b83923;
   background-color: #b83923f1;
+  padding: 0 96px;
 
   .slider {
     width: 1728px;
@@ -23,15 +19,16 @@
 
     .textPart {
       max-width: 420px;
-      button,
+
       h2,
-      p {
+      p,
+      button {
         opacity: 0;
         transform: translate(-50%);
+        animation: none;
         animation-duration: 0.2s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
-        animation-name: none;
         color: white;
       }
     }
@@ -41,7 +38,6 @@
       height: 95%;
       position: absolute;
       left: 54%;
-      right: auto;
       top: 50%;
       transform: translate(-50%, -50%);
       border-radius: 4px;
@@ -52,10 +48,10 @@
       align-items: center;
       opacity: 0;
       transform: translate(50%);
+      animation: none;
       animation-duration: 0.2s;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
-      animation-name: none;
       font-size: 20px;
       color: white;
 
@@ -75,7 +71,6 @@
         animation-name: toBe;
         animation-delay: 1.3s;
       }
-
       p {
         line-height: 1.8;
         font-size: 18px;
@@ -93,13 +88,14 @@
         letter-spacing: 2px;
         font-weight: 600;
         font-size: 18px;
+        animation-name: toBe;
+        animation-delay: 1.7s;
+
         &:hover {
           border-color: white;
           color: white;
           background-color: rgb(184, 57, 35);
         }
-        animation-name: toBe;
-        animation-delay: 1.7s;
       }
     }
 
@@ -110,15 +106,19 @@
   }
 }
 
+// -------------------- Responsive --------------------
+
 @media screen and (max-width: 1024px) {
   .slideComponent {
     min-height: 500px;
+    padding: 30px 64px;
+
     .slider {
-      margin: auto;
       max-width: 1024px;
-      align-items: center;
       flex-wrap: wrap;
-      // padding: 0 64px;
+      margin: auto;
+      align-items: center;
+      column-gap: 0;
 
       .textPart {
         max-width: 320px;
@@ -127,35 +127,14 @@
       img {
         width: 346px;
         height: 520px;
-        position: unset;
-        transform: translate(0);
+        position: static;
+        transform: none;
       }
 
       a {
         width: 100%;
         justify-content: center;
-        padding-top: 64px;
-        opacity: 0;
-        transform: translate(50%);
-      }
-    }
-
-    &.animate {
-      .textPart {
-        h2 {
-          animation-name: toBe;
-          animation-delay: 1.3s;
-        }
-
-        p {
-          animation-name: toBe;
-          animation-delay: 1.5s;
-        }
-      }
-
-      a {
-        animation-name: toBeLink;
-        animation-delay: 1.9s;
+        padding-top: 30px;
       }
     }
   }
@@ -163,35 +142,36 @@
 
 @media screen and (max-width: 375px) {
   .slideComponent {
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 30px;
-
+    padding: 30px 24px;
     .slider {
+      width: 100%;
+      height: 500px;
       margin: 0;
-      width: 405px;
-      height: 469px;
-      padding: 32px 0 0 0;
-      row-gap: 120px;
-      column-gap: 100px;
+      padding-top: 32px;
+      flex-direction: column;
+      align-items: start;
+      column-gap: 0;
+      row-gap: 0;
 
       .textPart {
         max-width: 162px;
-        max-height: 365px;
       }
 
       img {
         width: 160px;
         height: 320px;
-        right: 0;
-        top: 0;
         position: absolute;
+        top: 25%;
+        right: 0;
+        transform: translateY(-25%);
       }
 
       a {
         width: 100%;
         font-size: 16px;
-        padding: 0;
+
         svg {
           font-size: 20px;
           margin-left: 8px;
@@ -202,27 +182,26 @@
     &.animate {
       .textPart {
         h2 {
+          font-size: 18px;
           margin-bottom: 10px;
-          font-size: 30px;
-          animation-name: toBe;
-          animation-delay: 1.3s;
         }
 
         p {
+          font-size: 12px;
           line-height: 1.5;
-          font-size: 16px;
-          animation-name: toBe;
-          animation-delay: 1.5s;
         }
-      }
-
-      a {
-        animation-name: toBeLink;
-        animation-delay: 1.9s;
+        button {
+          padding: 8px 12px;
+          letter-spacing: 0;
+          font-weight: 400;
+          font-size: 14px;
+        }
       }
     }
   }
 }
+
+// -------------------- Animations --------------------
 
 @keyframes toBe {
   from {
@@ -231,7 +210,7 @@
   }
   to {
     opacity: 1;
-    transform: translate(0px);
+    transform: translate(0);
   }
 }
 
@@ -242,6 +221,6 @@
   }
   to {
     opacity: 1;
-    transform: translate(0px);
+    transform: translate(0);
   }
 }
