@@ -12,9 +12,9 @@ const HomePage = () => {
       <StorySection />
       <AboutPage />
       <SlideSection />
-      {/* <TextSection /> */}
-      {/* <CardSection /> */}
-      {/* <h1>Events բաժին</h1> */}
+      <TextSection />
+      <CardSection />
+      <h1>Events բաժին</h1>
     </div>
   );
 };

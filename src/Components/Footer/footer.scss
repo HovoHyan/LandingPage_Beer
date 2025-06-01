@@ -1,14 +1,12 @@
 footer {
   width: 100%;
   padding: 60px 96px;
-  // background: #cf7c40;
   background: linear-gradient(
     45deg,
     rgb(207, 83, 33) 0%,
     rgba(161, 63, 24, 0.89) 50%,
     rgb(204, 81, 44) 100%
   );
-  // background-color: #b83923;
   .footerContent {
     max-width: 1700px;
     display: flex;
@@ -96,6 +94,9 @@ footer {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      .settings {
+        margin-top: 25px;
+      }
       .social {
         padding-top: 60px;
       }
@@ -106,6 +107,49 @@ footer {
 
     img {
       order: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    padding: 40px 24px;
+
+    .footerContent {
+      row-gap: 40px;
+
+      .footerNav {
+        gap: 40px;
+
+        .story,
+        .settings,
+        .social {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .settings {
+          justify-content: center;
+          column-gap: 24px;
+
+          a svg {
+            font-size: 28px;
+
+            &:hover {
+              font-size: 32px;
+            }
+          }
+        }
+
+        .sticker {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      > img {
+        width: 64px;
+      }
     }
   }
 }

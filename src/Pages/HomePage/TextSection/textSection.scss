@@ -1,32 +1,57 @@
 .textSection {
-  max-width: 1200px;
-  // padding-top: 80px;
+  max-width: 1920px;
   padding: 30px 96px;
+  margin: 80px auto 40px;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.5s;
-  margin: 80px 0 40px;
+  animation: none;
+  will-change: opacity, transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h3 {
     font-size: 40px;
     margin-bottom: 20px;
   }
+
   p {
+    max-width: 1200px;
     font-size: 18px;
     margin-bottom: 25.6px;
     line-height: 1.8;
     font-weight: 400;
   }
+
+  &.animate {
+    animation: fadeInUp 0.6s ease forwards;
+  }
 }
+
+// Анимация появления снизу вверх
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// -------------------- Responsive --------------------
 
 @media screen and (max-width: 1024px) {
   .textSection {
-    width: 100vh;
+    width: 100%;
     padding-top: 60px;
     margin-bottom: 80px;
+
     h3 {
       font-size: 30px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 16px;
       margin-bottom: 12.8px;
@@ -40,10 +65,12 @@
     width: 100%;
     padding: 60px 36px 0;
     margin-bottom: 50px;
+
     h3 {
       font-size: 30px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 16px;
       margin-bottom: 12.8px;
