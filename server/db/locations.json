@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1752848299735",
+    "name": "Ծիրան սուպերմարկետ Աշտարակ, Ծիրան մարկետ ՍՊԸ",
+    "region": "Արագածոտն, Աշտարակ, Տիգրան Մեծի փողոց, 33/2",
+    "latitude": 40.300672,
+    "longitude": 44.359855,
+    "products": [
+      { "type": "PILSNER", "form": "շշային", "color": "Dark Blue-Gray" },
+      { "type": "WEIZEN", "form": "շշային", "color": "Pastel/Sandy Orange" },
+      { "type": "DUNKEL", "form": "շշային", "color": "Rich Reddish-Brown" },
+      {
+        "type": "AMERICAN WHEAT ALE",
+        "form": "շշային",
+        "color": "Muted Yellow-Green"
+      }
+    ]
+  },
+  {
+    "id": "1752876421594",
+    "name": "Նոր Ջրաղաց ռեստորան, Նոր Ջրաղաց ՍՊԸ",
+    "region": "Արագածոտն, Աշտարակ, Քասախի կիրճ փողոց, 15",
+    "latitude": 40.291833,
+    "longitude": 44.356997,
+    "products": [
+      { "type": "PILSNER", "form": "շշային", "color": "Dark Blue-Gray" },
+      { "type": "WEIZEN", "form": "շշային", "color": "Pastel/Sandy Orange" },
+      { "type": "DUNKEL", "form": "շշային", "color": "Rich Reddish-Brown" },
+      {
+        "type": "AMERICAN WHEAT ALE",
+        "form": "շշային",
+        "color": "Muted Yellow-Green"
+      }
+    ]
+  }
+]

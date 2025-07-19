@@ -1,0 +1,84 @@
+.contact-page {
+  margin-top: 90px;
+  display: flex;
+  height: calc(100vh - 90px);
+
+  .sidebar {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ccc;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .location-list {
+      flex: 0 1 80%;
+      overflow-y: auto;
+      padding-right: 6px;
+      margin-bottom: 10px;
+
+      button {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 5px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+
+    .product-filter {
+      flex: 0 1 20%;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+
+      h4 {
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        button {
+          padding: 6px 12px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 12px;
+          transition: all 0.2s;
+        }
+
+        .active {
+          font-weight: bold;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  .map-container {
+    flex: 1;
+    height: 100%;
+
+    .leaflet-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
