@@ -26,6 +26,8 @@ import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../Pages/Layout/Layout";
 import AdminPanel from "../Components/AdminPanel/AdminPanel";
+import FindUs from "../Pages/FindUs/FindUs";
+import Events from "../Pages/Eventes/Events";
 
 // Lazy load 
 const HomePage = lazy(() => import("../Pages/HomePage/HomePage"));
@@ -41,9 +43,9 @@ const AppRouter = () => {
           <Route index element={<HomePage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="events" element={<h1>Events</h1>} />
+          <Route path="events" element={<Events />} />
           <Route path="find" element={<ContactPage /> } />
-          <Route path="contact" element={<h1>Find Us</h1>} />
+          <Route path="contact" element={<FindUs />} />
           <Route path="admin" element={<AdminPanel />} />
         </Route>
       </Routes>

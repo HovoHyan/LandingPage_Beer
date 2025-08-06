@@ -7,10 +7,8 @@
   align-items: center;
   text-align: left;
   background-color: #b83923f1;
-  padding: 0 96px;
 
   .slider {
-    width: 1728px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -18,7 +16,7 @@
     column-gap: 600px;
 
     .textPart {
-      max-width: 420px;
+      width: clamp(320px, 50vw, 420px);
 
       h2,
       p,
@@ -26,7 +24,7 @@
         opacity: 0;
         transform: translate(-50%);
         animation: none;
-        animation-duration: 0.2s;
+        animation-duration: 0.3s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
         color: white;
@@ -34,29 +32,34 @@
     }
 
     img {
+      opacity: 0;
       width: 465px;
       height: 95%;
       position: absolute;
-      left: 54%;
+      left: 80%;
       top: 50%;
       transform: translate(-50%, -50%);
       border-radius: 4px;
+      animation: none;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
     }
-
     a {
+      width: 230px;
       display: flex;
       align-items: center;
       opacity: 0;
       transform: translate(50%);
       animation: none;
-      animation-duration: 0.2s;
+      animation-duration: 0.4s;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
-      font-size: 20px;
+      font-size: 16px;
       color: white;
 
       svg {
-        font-size: 28px;
+        font-size: 25px;
         margin-left: 10px;
       }
     }
@@ -66,21 +69,20 @@
     .textPart {
       h2 {
         margin-bottom: 20px;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 400;
         animation-name: toBe;
-        animation-delay: 1.3s;
+        animation-delay: 1.5s;
       }
       p {
         line-height: 1.8;
-        font-size: 18px;
         animation-name: toBe;
-        animation-delay: 1.5s;
+        animation-delay: 1.7s;
       }
       button {
         margin-top: 20px;
         cursor: pointer;
-        padding: 12px 24px;
+        padding: 8px 18px;
         border-radius: 99px;
         border: 3px solid rgb(184, 57, 35);
         color: rgb(184, 57, 35);
@@ -89,7 +91,7 @@
         font-weight: 600;
         font-size: 18px;
         animation-name: toBe;
-        animation-delay: 1.7s;
+        animation-delay: 1.9s;
 
         &:hover {
           border-color: white;
@@ -99,9 +101,14 @@
       }
     }
 
+    img {
+      animation-name: toBeImg;
+      animation-delay: 1s;
+    }
+
     a {
       animation-name: toBeLink;
-      animation-delay: 1.9s;
+      animation-delay: 2s;
     }
   }
 }
@@ -222,5 +229,16 @@
   to {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes toBeImg {
+  from {
+    opacity: 0;
+    left: 80%;
+  }
+  to {
+    opacity: 1;
+    left: 54%;
   }
 }

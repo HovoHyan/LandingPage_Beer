@@ -4,19 +4,16 @@ import "./aboutPage.scss";
 const AboutPage = () => {
   return (
     <section className="about379">
+      <div className="aboutGridBox"></div>
       <div className="aboutGridBox">
-        <h2 className="aboutBoxTitle">Collage</h2>
         <p>
-          "3 7 9" is a world-class beer. We guide beer lovers into the subtle
-          world of taste, discovering a new vision and re-evaluating the
-          enjoyment of quality beer. The "379" brand has a unique and symbolic
-          history. Our logo, name and slogan are carefully thought out, each
-          element has its own purpose and meaning. 379 is the numerical
-          expression of the letters of the word "V I S A P". In Armenian
-          mythology, the dragon is considered the powerful guardian of water
-          sources. It embodies the soul and identity of our brand. The Ouroboros
-          Dragon, represented in our logo, eating its own tail, symbolizes
-          self-development and self-improvement.
+          The “379” brand has a unique and symbolic history. Our logo, name and
+          slogan are carefully thought out, each element has its own purpose and
+          meaning. 379 is the numerical expression of the letters of the word “V
+          I S A P”. The dragon in Armenian mythology is considered the powerful
+          guardian of water sources. It embodies the soul and identity of our
+          brand. The Ouroboros Dragon, represented in our logo, eating its own
+          tail, symbolizes self-development and self-improvement.
         </p>
       </div>
       <div className="aboutGridBox">

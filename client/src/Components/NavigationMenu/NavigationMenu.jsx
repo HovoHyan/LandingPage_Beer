@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdLanguage } from "react-icons/md";
-import logoImg from "../../Icons/logo.png";
+import logoImg from "../../Icons/beige.png";
 import "./navigationMenu.scss";
 
 const NavigationMenu = () => {

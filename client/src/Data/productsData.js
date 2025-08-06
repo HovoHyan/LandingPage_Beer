@@ -1,7 +1,8 @@
-import productImg1 from "../Images/productImg4.png";
-import productImg2 from "../Images/productImg3.png";
-import productImg3 from "../Images/productImg5.png";
-import productImg4 from "../Images/prodPrototype.png";
+import productImg1 from "../Images/pilsner.png";
+import productImg2 from "../Images/weizen.png";
+import productImg3 from "../Images/dunkel.png";
+import productImg4 from "../Images/americanwheatale.png";
+import productImg5 from "../Images/barleywine.png";
 
 export const products = [
   {
@@ -34,7 +35,7 @@ export const products = [
   },
   {
     id: 4,
-    prodImg: productImg4,
+    prodImg: productImg5,
     title: "ARMENIAN BARLEY WINE ",
     context:
       "The ancestor of beers, an exclusive beer, made with 6 types of Armenian dried fruits and processed brandy alcohol. This is a unique beer, which is distinguished not only by its high alcohol content and rich, multi-layered flavor, but also by its density and multi-colored aftertaste.",

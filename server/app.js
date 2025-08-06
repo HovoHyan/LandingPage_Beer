@@ -25,23 +25,33 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
-app.use(express.static(path.join(__dirname, "public")));
 
+// Статические файлы
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+// Роуты API и админки
 app.use("/", indexRouter);
 app.use("/admin", adminRouter);
 
-// catch 404 and forward to error handler
+// Обработка 404 ошибки — если не найден маршрут
 app.use(function (req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// React SPA fallback — должен идти ПОСЛЕ 404,
+// чтобы отдавать index.html для всех "не API" путей
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
+// Обработчик ошибок
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
+  // Параметры для отображения ошибки в режиме разработки
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
 
-  // render the error page
+  // Рендерим страницу ошибки через EJS
   res.status(err.status || 500);
   res.render("error");
 });

@@ -2,7 +2,7 @@
   padding-top: 90px;
   .productsHandler {
     display: grid;
-    grid-template-columns: repeat(3, 650px);
+    grid-template-columns: repeat(3, 33.3%);
     grid-template-rows: repeat(2, 700px);
     justify-content: center;
   }

@@ -1,7 +1,9 @@
 .productCard {
   position: relative;
-  padding: 25px;
-  border: 6px double #b83923f1;
+  padding: 25px 45px;
+  border: 2px solid #fef5e1;
+  background-color: #b83923f1;
+  color: white;
   .prodDescription {
     position: absolute;
     width: 280px;
@@ -38,7 +40,7 @@
   }
   &:hover {
     img {
-      left: 25%;
+      left: 15%;
     }
     .prodDescription h2 {
       margin-bottom: 25px;

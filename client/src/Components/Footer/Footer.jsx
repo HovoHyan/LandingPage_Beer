@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logoImg from "../../Icons/logo.png";
-import sticker from "../../Images/sticker2.jpg";
+import logoImg from "../../Icons/beige.png";
+// import sticker from "../../Images/sticker2.jpg";
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import { FaYoutube, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 
@@ -69,9 +69,6 @@ const Footer = () => {
                 <FaYoutube />
               </NavLink>
             </div>
-            {/* <div className="sticker">
-              <img src={sticker} alt="Sticker" />
-            </div> */}
           </nav>
           <img src={logoImg} alt="Logo" />
         </div>

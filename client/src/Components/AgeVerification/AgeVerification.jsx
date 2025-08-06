@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../Icons/logo.png";
+import logo from "../../Icons/beige.png";
 import "./ageVerification.scss";
 
 const AgeVerification = () => {
@@ -19,6 +19,7 @@ const AgeVerification = () => {
   return (
     <div className="age-verification">
       <img src={logo} alt="Logo" />
+      {/* <video src={vidBeer} autoPlay muted ></video> */}
       <h1>
         <span>
           Are you of an age to <sup>18</sup> <br /> FEEL THE DRAGONS POWER

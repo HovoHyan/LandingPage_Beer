@@ -11,7 +11,7 @@ const SliderContent = () => {
   return (
     <Swiper
       autoplay={{
-        delay: 300000,
+        delay: 3000,
       }}
       loop={true}
       speed={1500}

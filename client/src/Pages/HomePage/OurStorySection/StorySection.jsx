@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import storyImg1 from "../../../Images/ourStory1.png";
-import storyImg2 from "../../../Images/ourStory2.png";
-import storyImg3 from "../../../Images/ourStory3.png";
+import storyImg1 from "../../../Images/picture1.png";
+import storyImg2 from "../../../Images/picture2.png";
+import storyImg3 from "../../../Images/picture3.jpg";
 import DublicateComponent from "../../../Components/DublicateComponent/DublicateComponent";
 import throttle from "lodash.throttle";
 import "./storySection.scss";
