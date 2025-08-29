@@ -1,4 +1,5 @@
 .productCard {
+  height: 650px;
   position: relative;
   padding: 25px 45px;
   border: 2px solid #fef5e1;
@@ -6,50 +7,141 @@
   color: white;
   .prodDescription {
     position: absolute;
-    width: 280px;
+    width: 270px;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
-    h2,
-    p {
+    .prodTitle {
+      width: 250px;
+      padding: 0 10px 0 0;
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
       opacity: 0;
       transform: translate(50%);
       animation-duration: 0.5s;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
       animation-name: none;
+      h2 {
+        position: absolute;
+        font-size: 43px;
+        letter-spacing: 2px;
+        left: 5px;
+        top: 12px;
+        transform: scaleY(1.8);
+        text-align: center;
+      }
+      .titleColor {
+        width: 100%;
+        height: 45%;
+        border-radius: 8px;
+      }
+    }
+    .prodStats {
+      margin: 10px 0 20px 0;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translate(50%);
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-name: none;
+      .abv {
+        padding-top: 10px;
+        border-top: 5px solid;
+      }
+      .ibu {
+        padding-top: 10px;
+        border-top: 5px solid;
+      }
+    }
+    .prodContent {
+      opacity: 0;
+      transform: translate(50%);
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-name: none;
+      hr {
+        width: 150px;
+        margin: 10px 0;
+      }
     }
   }
   img {
     transition: all 1s;
     position: absolute;
-    width: 200px;
+    width: 270px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    filter: drop-shadow(20px 10px 15px #000);
   }
-  button {
+  a {
     cursor: pointer;
     position: absolute;
-    border-radius: 14px;
     padding: 12px 24px;
-    border: 3px solid gray;
+    border-radius: 99px;
+    border: 3px solid rgb(184, 57, 35);
+    color: rgb(184, 57, 35);
+    transition: all 0.8s;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #fff;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
+    &:hover {
+      border-color: white;
+      color: white;
+      background-color: rgb(184, 57, 35);
+    }
   }
   &:hover {
     img {
       left: 15%;
     }
-    .prodDescription h2 {
+    .prodTitle {
       margin-bottom: 25px;
       animation-name: toBe;
       animation-delay: 1.1s;
     }
-    .prodDescription p {
+    .prodStats {
+      opacity: 0;
+      animation-name: toBe;
+      animation-delay: 1.1s;
+    }
+    .prodContent {
       animation-name: toBe;
       animation-delay: 1.4s;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .productCard {
+    width: 100vw;
+    padding: 25px 35px;
+    .prodDescription {
+      width: 220px;
+      .prodTitle {
+        width: 220px;
+        height: 60px;
+        h2 {
+          font-size: 30px;
+        }
+        .titleColor {
+          width: 100%;
+          height: 45%;
+          border-radius: 8px;
+        }
+      }
     }
   }
 }

@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import SliderComponent from "../../../../Components/SliderComponent/SliderComponent";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules"; // Autoplay,
 import { Swiper, SwiperSlide } from "swiper/react";
 import { products } from "../../../../Data/productsData";
 import "swiper/css";
 import "./sliderContent.scss";
+import "swiper/css/navigation";
 
 const SliderContent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Swiper
-      autoplay={{
-        delay: 3000,
-      }}
+      // autoplay={{
+      //   delay: 3000,
+      // }}
       loop={true}
       speed={1500}
-      modules={[Autoplay]}
+      navigation={true}
+      modules={[ Navigation]}
       className="mySwiper"
       onSlideChange={(swiper) => {
         if (swiper.realIndex !== activeIndex) {
@@ -28,7 +30,8 @@ const SliderContent = () => {
           <SliderComponent
             isActive={activeIndex === index}
             boxTitle={slider.title}
-            boxText={slider.context}
+            color={slider.color}
+            boxText={slider.context.split("?")}
             prodImg={slider.prodImg}
           />
         </SwiperSlide>
@@ -38,3 +41,4 @@ const SliderContent = () => {
 };
 
 export default SliderContent;
+

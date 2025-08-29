@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import HeaderSlide from "../../../../Components/HeaderSlide/HeaderSlide";
-import headSlideImg1 from "../../../../Images/headerSlide1.jpg";
-import headSlideImg2 from "../../../../Images/headerSlide2.jpg";
+import headSlideImg1 from "../../../../Images/headerSlide1.png";
+import headSlideImg2 from "../../../../Images/headerSlide2.png";
 import headSlideImg3 from "../../../../Images/headerSlide3.png";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./headerSlider.scss";
 
 const HeaderSlider = () => {
@@ -15,30 +16,26 @@ const HeaderSlider = () => {
     {
       id: 0,
       slideImg: headSlideImg2,
-      slideText: "FEEL THE DRAGON'S POWER"
+      slideText: `FEEL THE DRAGON'S POWER`,
     },
     {
       id: 1,
       slideImg: headSlideImg1,
-      slideText: "AWAKEN THE LEGEND WITHIN"
+      slideText: `AWAKEN THE LEGEND WITHIN`,
     },
     {
       id: 2,
       slideImg: headSlideImg3,
-      slideText: "LET YOUR FIRE RISE"
-    }
-  ]
+      slideText: `LET YOUR FIRE RISE`,
+    },
+  ];
+
   return (
     <Swiper
-      pagination={{
-        clickable: true,
-      }}
-      autoplay={{
-        delay: 5000,
-      }}
       loop={true}
       speed={1000}
-      modules={[Pagination, Autoplay]}
+      navigation={true}
+      modules={[Navigation]}
       className="mySwiper"
       onSlideChange={(swiper) => {
         if (swiper.realIndex !== activeIndex) {
@@ -48,7 +45,11 @@ const HeaderSlider = () => {
     >
       {headSliderData.map((slideData, index) => (
         <SwiperSlide key={slideData.id}>
-          <HeaderSlide isActive={activeIndex === index} prodImg={slideData.slideImg} slideText={slideData.slideText} />
+          <HeaderSlide
+            isActive={activeIndex === index}
+            prodImg={slideData.slideImg}
+            slideText={slideData.slideText}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

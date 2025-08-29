@@ -1,5 +1,6 @@
 import React from "react";
 import "./aboutPage.scss";
+import { NavLink } from "react-router-dom";
 
 const AboutPage = () => {
   return (
@@ -7,51 +8,55 @@ const AboutPage = () => {
       <div className="aboutGridBox"></div>
       <div className="aboutGridBox">
         <p>
-          The “379” brand has a unique and symbolic history. Our logo, name and
-          slogan are carefully thought out, each element has its own purpose and
-          meaning. 379 is the numerical expression of the letters of the word “V
-          I S A P”. The dragon in Armenian mythology is considered the powerful
-          guardian of water sources. It embodies the soul and identity of our
-          brand. The Ouroboros Dragon, represented in our logo, eating its own
-          tail, symbolizes self-development and self-improvement.
+          «379» ապրանքանիշն ունի յուրահատուկ և խորհրդանշական պատմություն։ Մեր
+          լոգոն, անվանումը և կարգախոսը մանրակրկիտ մտածված են, յուրաքանչյուր տարր
+          ունի իր նպատակը և իմաստը։ 379-ը «V I S A P» բառի տառերի թվային
+          արտահայտությունն է։ Հայկական դիցաբանության մեջ վիշապը համարվում է
+          ջրային աղբյուրների հզոր պահապանը։ Այն մարմնավորում է մեր ապրանքանիշի
+          հոգին և ինքնությունը։ Մեր լոգոյում ներկայացված Ուրոբորոս վիշապը՝ իր
+          սեփական պոչը ուտողը, խորհրդանշում է ինքնազարգացում և
+          ինքնակատարելագործում։
         </p>
       </div>
       <div className="aboutGridBox">
-        <h2 className="aboutBoxTitle">379 Mission</h2>
+        <h2 className="aboutBoxTitle">379 առաքելություն</h2>
         <p>
-          We build a strong brand, whose strength is commitment and
-          responsibility, where mediocre performance, delays, poor quality and
-          slowness are intolerable. We value time, have no fears, think and act
-          to change.
+          Մենք կառուցում ենք ուժեղ ապրանքանիշ, որի ուժը նվիրվածությունն ու
+          պատասխանատվությունն է, որտեղ միջակ կատարողականը, ուշացումները, վատ
+          որակը և դանդաղկոտությունը անտանելի են։ Մենք գնահատում ենք ժամանակը,
+          չունենք վախեր, մտածում և գործում ենք փոփոխության համար։
         </p>
-        <h2 className="aboutBoxTitle">Vision 379</h2>
+        <h2 className="aboutBoxTitle">Տեսլական 379</h2>
         <p>
-          We lead the market without stereotypes and boundaries. We do not adapt
-          to history, we create the future.
+          Մենք առաջատարն ենք շուկայում՝ առանց կարծրատիպերի և սահմանների։ Մենք
+          չենք հարմարվում պատմությանը, մենք ստեղծում ենք ապագան։
         </p>
         <h2 className="aboutBoxTitle">
-          <span>Our motto is:</span> Feel the Dragon's Breath
+          <span>Մեր կարգախոսն է.</span> Զգացեք վիշապի շունչը
         </h2>
       </div>
       <div className="aboutGridBox"></div>
       <div className="aboutGridBox"></div>
       <div className="aboutGridBox">
         <p>
-          The 379 Brewing Company was founded in October 2021. Now, through
-          tireless dedication and hard work, 379 has become widely available
-          across the country. 379 can be found in over 650 supermarkets,
-          specialty beer stores, pubs, and other HoReCa outlets.
+          379 գարեջրագործական ընկերությունը հիմնադրվել է 2021 թվականի
+          հոկտեմբերին։ Այժմ, անխոնջ նվիրվածության և քրտնաջան աշխատանքի շնորհիվ,
+          379-ը լայնորեն հասանելի է դարձել ամբողջ երկրում։ 379-ը կարելի է գտնել
+          ավելի քան 650 սուպերմարկետներում, մասնագիտացված գարեջրի խանութներում,
+          պանդոկներում և այլ HoReCa կետերում։
         </p>
-        <button>Find 379</button>
+        <NavLink to={"/find"}>Գտեք 379-ը</NavLink>
       </div>
       <div className="aboutGridBox">
         <p>
-          To obtain 379, our ingredients are imported from the world's top beer
-          raw material companies. We cooperate with such famous German companies
-          as "Weyermann® Specialty Malting" and "BarthHaas GmbH & Co. KG" to
-          bring you the highest quality malt and hops. The 379 brewery is
-          located in the Katnaghbyur community of Kotayk region, where the water
-          with its unique composition makes our product even more unique.
+          379-ը ձեռք բերելու համար մեր բաղադրիչները ներմուծվում են աշխարհի
+          առաջատար գարեջրի հումքի ընկերություններից։ Մենք համագործակցում ենք
+          այնպիսի հայտնի գերմանական ընկերությունների հետ, ինչպիսիք են
+          «Weyermann® Specialty Malting»-ը և «BarthHaas GmbH & Co. KG»-ն՝ ձեզ
+          համար առաջարկելու ամենաբարձր որակի գարեջուր և գարեջուր։ 379
+          գարեջրատունը գտնվում է Կոտայքի մարզի Կաթնաղբյուր համայնքում, որտեղ
+          ջուրը իր յուրահատուկ կազմով մեր արտադրանքն ավելի յուրահատուկ է
+          դարձնում։
         </p>
       </div>
       <div className="aboutGridBox"></div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import throttle from "lodash.throttle";
-import magicDragon from "../../../Videos/ForStory/firelogo.mp4";
+import magicDragon from "../../../Videos/ForStory/magicVideo.mp4";
 import posterDragon from "../../../Icons/beige.png";
 import "./textSection.scss";
 
@@ -60,11 +60,11 @@ const TextSection = () => {
       className={`textSection ${isVisible ? "animate" : ""}`}
       ref={textRef}
     >
-      <h3>The Magic of Dragon </h3>
+      <h3>Վիշապի կախարդանքը</h3>
       <p>
-        And so our story continues: the dragon of 379 preserves and develops
-        the heritage of brewing, which comes from our land, our water, our
-        essence.
+        Եվ այսպես մեր պատմությունը շարունակվում է. 379-ի վիշապը պահպանում և
+        զարգացնում է գարեջրագործության ժառանգությունը, որը գալիս է մեր հողից,
+        մեր ջրից, մեր էությունից։
       </p>
 
       <div className="video-container" onClick={togglePlay}>

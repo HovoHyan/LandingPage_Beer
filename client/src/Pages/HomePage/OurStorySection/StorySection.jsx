@@ -15,23 +15,23 @@ const StorySection = () => {
     {
       itemRef: boxItemRef,
       itemImg: storyImg1,
-      itemTitle: "Built to become a legend",
+      itemTitle: "Ստեղծվել է լեգենդ դառնալու համար",
       itemText:
-        "We were born in a country where beer is not just a drink: it is a story, fermented from water and fire. '3 7 9' is for those who appreciate not only beer, but also creativity, responsibility and dedication.",
+        "Մենք ծնվել ենք մի երկրում, որտեղ գարեջուրը պարզապես խմիչք չէ. այն պատմություն է, որը խմորվում է ջրից և կրակից: «3 7 9»-ը նրանց համար է, ովքեր գնահատում են ոչ միայն գարեջուրը, այլև ստեղծագործականությունը, պատասխանատվությունը և նվիրվածությունը:",
     },
     {
       itemRef: boxItemRef2,
       itemImg: storyImg2,
-      itemTitle: "World-class quality starts with raw materials",
+      itemTitle: "Համաշխարհային մակարդակի որակը սկսվում է հումքից",
       itemText:
-        "'3 7 9' collaborates with the German company Weyermann® Specialty Malting to ensure the best raw materials in beer production. Every detail is thought out, every grain is selected.",
+        "«3 7 9»-ը համագործակցում է գերմանական Weyermann® Specialty Malting ընկերության հետ՝ գարեջրի արտադրության մեջ լավագույն հումքն ապահովելու համար: Յուրաքանչյուր մանրուք մտածված է, յուրաքանչյուր հատիկ ընտրվում է:",
     },
     {
       itemRef: boxItemRef3,
       itemImg: storyImg3,
-      itemTitle: "The ancestor of beer: Armenian Barley Wine",
+      itemTitle: "Գարեջրի նախնին. Հայկական գարու գինի",
       itemText:
-        "379 is engaged in the production of the exclusive English Barley Wine beer, the ancestor of beers. It is made with 6 types of Armenian dried fruits and processed brandy alcohol. Barley Wine is not just a beer, but a new layer of taste, in culture and craftsmanship.",
+        "379-ը զբաղվում է գարեջրի նախնու՝ անգլիական Barley Wine բացառիկ գարեջրի արտադրությամբ։ Այն պատրաստվում է 6 տեսակի հայկական չոր մրգերից և վերամշակված կոնյակի սպիրտից։ Barley Wine-ը պարզապես գարեջուր չէ, այլ համի նոր շերտ՝ մշակույթի և արհեստագործության մեջ։",
     },
   ];
 
@@ -69,7 +69,7 @@ const StorySection = () => {
   return (
     <section className="storySection">
       <div className="storyHandler">
-        <h2 className="sectionTitle">Our Story</h2>
+        <h2 className="sectionTitle">Մեր պատմությունը</h2>
         <div className="contentBox">
           {storyArr.map((el, ind) => (
             <DublicateComponent

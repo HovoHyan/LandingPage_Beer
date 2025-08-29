@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logoImg from "../../Icons/beige.png";
-// import sticker from "../../Images/sticker2.jpg";
 import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import { FaYoutube, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 

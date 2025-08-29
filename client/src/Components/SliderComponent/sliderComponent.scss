@@ -1,7 +1,6 @@
 .slideComponent {
   width: 100%;
-  min-height: 780px;
-  max-height: 800px;
+  height: 750px;
   position: relative;
   display: flex;
   align-items: center;
@@ -11,51 +10,71 @@
   .slider {
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
-    column-gap: 600px;
+    justify-content: space-around;
+    align-items: center;
 
     .textPart {
-      width: clamp(320px, 50vw, 420px);
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      row-gap: 20px;
+      opacity: 0;
+      transform: translate(50%);
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-name: none;
 
-      h2,
+      .prodTitle {
+        padding: 0 10px 0 0;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        h2 {
+          position: absolute;
+          font-size: 43px;
+          letter-spacing: 2px;
+          left: 5px;
+          top: 12px;
+          transform: scaleY(1.8);
+          // text-align: center;
+          color: white;
+        }
+        .titleColor {
+          width: 100%;
+          height: 45%;
+          border-radius: 8px;
+        }
+      }
       p,
-      button {
+      .buyLink {
         opacity: 0;
         transform: translate(-50%);
         animation: none;
-        animation-duration: 0.3s;
+        animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
         color: white;
       }
+      hr {
+        width: 100%;
+      }
     }
-
-    img {
-      opacity: 0;
-      width: 465px;
-      height: 95%;
-      position: absolute;
-      left: 80%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 4px;
-      animation: none;
-      animation-duration: 0.5s;
-      animation-timing-function: linear;
-      animation-fill-mode: forwards;
-    }
-    a {
+    .prodLink {
       width: 230px;
       display: flex;
       align-items: center;
       opacity: 0;
       transform: translate(50%);
       animation: none;
-      animation-duration: 0.4s;
+      animation-duration: 0.5s;
       animation-timing-function: linear;
       animation-fill-mode: forwards;
-      font-size: 16px;
+      font-size: 14px;
       color: white;
 
       svg {
@@ -63,52 +82,61 @@
         margin-left: 10px;
       }
     }
+
+    img {
+      opacity: 0;
+      width: 465px;
+      height: 95%;
+      transform: translate(50%);
+      border-radius: 4px;
+      animation: none;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
   }
 
   &.animate {
     .textPart {
-      h2 {
-        margin-bottom: 20px;
-        font-size: 30px;
+      animation-name: toBe;
+      animation-delay: 1.5s;
+      .prodTitle h2 {
         font-weight: 400;
-        animation-name: toBe;
-        animation-delay: 1.5s;
       }
       p {
         line-height: 1.8;
         animation-name: toBe;
-        animation-delay: 1.7s;
+        animation-delay: 1.5s;
       }
-      button {
-        margin-top: 20px;
+      .buyLink {
         cursor: pointer;
         padding: 8px 18px;
         border-radius: 99px;
-        border: 3px solid rgb(184, 57, 35);
-        color: rgb(184, 57, 35);
+        border-color: white;
+        color: white;
+        border: 3px solid white;
         transition: all 0.8s;
         letter-spacing: 2px;
         font-weight: 600;
         font-size: 18px;
         animation-name: toBe;
-        animation-delay: 1.9s;
+        animation-delay: 1.5s;
 
         &:hover {
-          border-color: white;
-          color: white;
-          background-color: rgb(184, 57, 35);
+          color: rgb(184, 57, 35);
+          border: 3px solid rgb(184, 57, 35);
+          background-color: white;
         }
+      }
+      .prodLink {
+        animation-name: toBeLink;
+        animation-delay: 1.5s;
       }
     }
 
     img {
-      animation-name: toBeImg;
+      animation-name: toBe;
       animation-delay: 1s;
-    }
-
-    a {
-      animation-name: toBeLink;
-      animation-delay: 2s;
     }
   }
 }
@@ -129,6 +157,11 @@
 
       .textPart {
         max-width: 320px;
+        row-gap: 30px;
+        p {
+          line-height: 1.5;
+          font-size: 14px;
+        }
       }
 
       img {
@@ -136,12 +169,6 @@
         height: 520px;
         position: static;
         transform: none;
-      }
-
-      a {
-        width: 100%;
-        justify-content: center;
-        padding-top: 30px;
       }
     }
   }
@@ -163,7 +190,14 @@
       row-gap: 0;
 
       .textPart {
-        max-width: 162px;
+        width: 220px;
+        row-gap: 20px;
+        p {
+          width: 100%;
+        }
+        .buyLink {
+          font-size: 12px;
+        }
       }
 
       img {
@@ -175,9 +209,9 @@
         transform: translateY(-25%);
       }
 
-      a {
-        width: 100%;
-        font-size: 16px;
+      .prodLink {
+        // width: 100%;
+        font-size: 12px;
 
         svg {
           font-size: 20px;
@@ -213,7 +247,7 @@
 @keyframes toBe {
   from {
     opacity: 0;
-    transform: translate(-50%);
+    transform: translate(50%);
   }
   to {
     opacity: 1;
@@ -229,16 +263,5 @@
   to {
     opacity: 1;
     transform: translate(0);
-  }
-}
-
-@keyframes toBeImg {
-  from {
-    opacity: 0;
-    left: 80%;
-  }
-  to {
-    opacity: 1;
-    left: 54%;
   }
 }

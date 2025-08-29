@@ -12,9 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: #b83923f1;
+    color: #161616;
     row-gap: 25px;
-
     h2 {
       font-size: 28px;
     }
@@ -24,7 +23,7 @@
       line-height: 1.8;
     }
 
-    button {
+    a {
       cursor: pointer;
       padding: 12px 24px;
       border-radius: 99px;
@@ -74,6 +73,7 @@
       }
       p {
         font-size: 18px;
+        line-height: 1.5;
       }
 
       &:nth-child(1),
@@ -104,7 +104,7 @@
         font-size: 16px;
       }
 
-      button {
+      a {
         font-size: 16px;
         padding: 10px 20px;
       }
@@ -114,26 +114,37 @@
     }
 
     // Порядок отображения
-    .aboutGridBox:nth-child(3) {
-      order: 1;
-      height: 300px;
+    .aboutGridBox.bg1::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: url("../../Images/about1.png") no-repeat center / cover;
+      margin-bottom: 15px;
     }
-    .aboutGridBox:nth-child(2) {
-      order: 2;
+    .aboutGridBox.bg2::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: url("../../Images/about2.png") no-repeat center / cover;
+      margin-bottom: 15px;
     }
-    .aboutGridBox:nth-child(4) {
-      order: 3;
-      height: 300px;
+    .aboutGridBox.bg3::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: url("../../Images/about3.png") no-repeat center / cover;
+      margin-bottom: 15px;
     }
-    .aboutGridBox:nth-child(5) {
-      order: 4;
-    }
-    .aboutGridBox:nth-child(7) {
-      order: 5;
-      height: 300px;
-    }
-    .aboutGridBox:nth-child(6) {
-      order: 6;
+    .aboutGridBox.bg4::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: url("../../Images/about4.jpg") no-repeat center / cover;
+      margin-bottom: 15px;
     }
   }
 }

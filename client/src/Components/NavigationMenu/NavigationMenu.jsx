@@ -39,22 +39,22 @@ const NavigationMenu = () => {
 
         <ul className={`navLinks ${isMenuOpen ? "open" : ""}`}>
           <li onClick={closeMenu}>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Գլխավոր էջ</NavLink>
           </li>
           <li onClick={closeMenu}>
-            <NavLink to="/about">About 379</NavLink>
+            <NavLink to="/about">379-ի մասին</NavLink>
           </li>
           <li onClick={closeMenu}>
-            <NavLink to="/products">379 Beer Styles</NavLink>
+            <NavLink to="/products">379 տեսականի</NavLink>
           </li>
           <li onClick={closeMenu}>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink to="/events">Միջոցառումներ</NavLink>
           </li>
           <li onClick={closeMenu}>
-            <NavLink to="/find">Find Us</NavLink>
+            <NavLink to="/find">Որտեղ գնել</NavLink>
           </li>
           <li onClick={closeMenu}>
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink to="/contact">Կապ</NavLink>
           </li>
           <li>
             <MdLanguage />

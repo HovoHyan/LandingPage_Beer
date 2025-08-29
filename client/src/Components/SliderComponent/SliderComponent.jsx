@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import "./sliderComponent.scss";
 
-const SliderComponent = ({ isActive, boxTitle, boxText, prodImg }) => {
+const SliderComponent = ({ isActive, boxTitle, color, boxText, prodImg }) => {
   const [animateClass, setAnimateClass] = useState("");
+  console.log(boxText);
 
   useEffect(() => {
     if (isActive) {
@@ -15,16 +16,43 @@ const SliderComponent = ({ isActive, boxTitle, boxText, prodImg }) => {
   return (
     <div className={`slideComponent ${animateClass}`}>
       <div className="slider">
-        <div className="textPart">
-          <h2>{boxTitle}</h2>
-          <p>{boxText}</p>
-          <button>Where to buy</button>
-        </div>
         <img src={prodImg} alt="Product" className="productImg" />
-        <NavLink to={"/products"}>
-          See all our products
-          <MdKeyboardArrowRight />
-        </NavLink>
+        <div className="textPart">
+          <div className="prodTitle" style={{ width: "250px" }}>
+            {boxTitle.length < 8 ? (
+              <h2>{boxTitle}</h2>
+            ) : (
+              <h2 style={{ fontSize: "26px", width: "500px" }}>{boxTitle}</h2>
+            )}
+            {boxTitle.length < 8 ? (
+              <>
+                <div
+                  className="titleColor"
+                  style={{ backgroundColor: color }}
+                ></div>
+                <div
+                  className="titleColor"
+                  style={{ backgroundColor: color }}
+                ></div>
+              </>
+            ) : (
+              <>
+                <div className="titleColor"></div>
+                <div className="titleColor"></div>
+              </>
+            )}
+          </div>
+          {boxText.map((elem, index) => {
+            return <p key={index}>{elem}</p>;
+          })}
+          <NavLink to={"/find"} className={"buyLink"}>
+            Որտեղ գնել
+          </NavLink>
+          <NavLink to={"/products"} className={"prodLink"}>
+            Տեսեք մեր բոլոր ապրանքները
+            <MdKeyboardArrowRight />
+          </NavLink>
+        </div>
       </div>
     </div>
   );

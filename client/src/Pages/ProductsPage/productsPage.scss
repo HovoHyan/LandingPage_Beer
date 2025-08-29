@@ -1,9 +1,33 @@
+@font-face {
+  font-family: "Arkhip";
+  src: url("../../Fonts/Arkhip/Arkhip_font.ttf");
+}
+
 .productsSection {
   padding-top: 90px;
+  font-family: "Arkhip";
+
   .productsHandler {
     display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(2, 700px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+  }
+}
+
+/* Планшет: 2 карточки в ряд */
+@media screen and (max-width: 1024px) {
+  .productsSection {
+    .productsHandler {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+/* Мобильный: 1 карточка в ряд */
+@media screen and (max-width: 768px) {
+  .productsSection {
+    .productsHandler {
+      grid-template-columns: 1fr;
+    }
   }
 }

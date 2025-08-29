@@ -1,3 +1,24 @@
-.mySwiper {
-  width: 100%;
+.sliderWrapper {
+  position: relative;
+
+  .custom-prev,
+  .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: gray;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .custom-prev {
+    left: 10px;
+  }
+
+  .custom-next {
+    right: 10px;
+  }
 }
