@@ -17,6 +17,7 @@
 /* Планшет: 2 карточки в ряд */
 @media screen and (max-width: 1024px) {
   .productsSection {
+    padding-top: 0px;
     .productsHandler {
       grid-template-columns: repeat(2, 1fr);
     }

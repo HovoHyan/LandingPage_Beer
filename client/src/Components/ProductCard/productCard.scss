@@ -12,9 +12,9 @@
     right: 5%;
     transform: translateY(-50%);
     .prodTitle {
-      width: 250px;
+      width: 280px;
       padding: 0 10px 0 0;
-      height: 70px;
+      height: 84px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -27,17 +27,21 @@
       animation-name: none;
       h2 {
         position: absolute;
-        font-size: 43px;
+        font-size: 48px;
         letter-spacing: 2px;
         left: 5px;
-        top: 12px;
+        top: 16px;
         transform: scaleY(1.8);
-        text-align: center;
+      }
+      .bWine {
+        font-size: 24px;
+        line-height: 0.99;
+        top: 20px;
       }
       .titleColor {
         width: 100%;
-        height: 45%;
-        border-radius: 8px;
+        height: 47%;
+        border-radius: 6px;
       }
     }
     .prodStats {
@@ -67,8 +71,10 @@
       animation-timing-function: linear;
       animation-fill-mode: forwards;
       animation-name: none;
-      hr {
-        width: 150px;
+      .hr {
+        width: 90%;
+        height: 3px;
+        border-radius: 10px;
         margin: 10px 0;
       }
     }
@@ -85,14 +91,14 @@
   a {
     cursor: pointer;
     position: absolute;
-    padding: 12px 24px;
+    padding: 8px 18px;
     border-radius: 99px;
     border: 3px solid rgb(184, 57, 35);
     color: rgb(184, 57, 35);
     transition: all 0.8s;
     letter-spacing: 2px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #fff;
     bottom: 20px;
     left: 50%;
@@ -124,17 +130,27 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .productCard {
     width: 100vw;
+    height: 800px;
+    border: none;
+    border-bottom: 2px solid white;
     padding: 25px 35px;
     .prodDescription {
       width: 220px;
       .prodTitle {
         width: 220px;
-        height: 60px;
+        height: 50px;
         h2 {
           font-size: 30px;
+          top: 14px;
+        }
+        .bWine {
+          width: 70%;
+          font-size: 14px;
+          line-height: 1.1;
+          top: 13px;
         }
         .titleColor {
           width: 100%;

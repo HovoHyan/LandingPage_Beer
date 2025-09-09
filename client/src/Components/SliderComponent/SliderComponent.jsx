@@ -3,7 +3,14 @@ import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import "./sliderComponent.scss";
 
-const SliderComponent = ({ isActive, boxTitle, color, boxText, prodImg }) => {
+const SliderComponent = ({
+  isActive,
+  boxTitle,
+  stats,
+  color,
+  boxText,
+  prodImg,
+}) => {
   const [animateClass, setAnimateClass] = useState("");
   console.log(boxText);
 
@@ -20,11 +27,11 @@ const SliderComponent = ({ isActive, boxTitle, color, boxText, prodImg }) => {
         <div className="textPart">
           <div className="prodTitle" style={{ width: "250px" }}>
             {boxTitle.length < 8 ? (
-              <h2>{boxTitle}</h2>
+              <h2 className="allTit">{boxTitle}</h2>
             ) : (
-              <h2 style={{ fontSize: "26px", width: "500px" }}>{boxTitle}</h2>
+              <h2 className="bWine">{boxTitle}</h2>
             )}
-            {boxTitle.length < 8 ? (
+            {boxTitle.split("").reverse().splice(0, 5).join("") !== " ENIW" ? (
               <>
                 <div
                   className="titleColor"
@@ -42,8 +49,29 @@ const SliderComponent = ({ isActive, boxTitle, color, boxText, prodImg }) => {
               </>
             )}
           </div>
+          <div className="prodStats">
+            <div className="abv" style={{ borderColor: color }}>
+              ABV - {stats.abv}
+            </div>
+            <div className="ibu" style={{ borderColor: color }}>
+              IBU - {stats.ibu}
+            </div>
+          </div>
           {boxText.map((elem, index) => {
-            return <p key={index}>{elem}</p>;
+            if (index === 2) {
+              return (
+                <>
+                  <p key={index}>{elem}</p>
+                </>
+              );
+            } else {
+              return (
+                <>
+                  <p key={index}>{elem}</p>
+                  <div className="hr"></div>
+                </>
+              );
+            }
           })}
           <NavLink to={"/find"} className={"buyLink"}>
             Որտեղ գնել

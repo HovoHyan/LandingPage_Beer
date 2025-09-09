@@ -42,7 +42,7 @@ const AgeVerification = () => {
           <img src={logo} alt="Logo" />
           <h1>
             <span>
-              Are you of an age <sup>18</sup> <br /> TO FEEL THE DRAGONS POWER
+              Are you of an age <sup>(18)</sup> <br /> TO FEEL THE DRAGONS POWER
             </span>
           </h1>
           <div className="buttons">

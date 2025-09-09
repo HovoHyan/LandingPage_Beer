@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SliderComponent from "../../../../Components/SliderComponent/SliderComponent";
-import { Autoplay, Navigation } from "swiper/modules"; // Autoplay,
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { products } from "../../../../Data/productsData";
 import "swiper/css";
@@ -11,9 +11,6 @@ const SliderContent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Swiper
-      // autoplay={{
-      //   delay: 3000,
-      // }}
       loop={true}
       speed={1500}
       navigation={true}
@@ -30,6 +27,7 @@ const SliderContent = () => {
           <SliderComponent
             isActive={activeIndex === index}
             boxTitle={slider.title}
+            stats={slider.stats}
             color={slider.color}
             boxText={slider.context.split("?")}
             prodImg={slider.prodImg}

@@ -8,6 +8,7 @@ export const products = [
   {
     id: 0,
     prodImg: productImg1,
+    stats: { abv: "4.8%", ibu: "28" },
     color: "#425f76",
     title: "PILSNER",
     context:
@@ -16,6 +17,7 @@ export const products = [
   {
     id: 1,
     prodImg: productImg2,
+    stats: { abv: "5%", ibu: "11" },
     color: "#fbb44c",
     title: "WEIZEN",
     context:
@@ -24,6 +26,7 @@ export const products = [
   {
     id: 2,
     prodImg: productImg3,
+    stats: { abv: "5.2%", ibu: "20" },
     color: "#471917",
     title: "DUNKEL",
     context:
@@ -32,6 +35,7 @@ export const products = [
   {
     id: 3,
     prodImg: productImg4,
+    stats: { abv: "4.8%", ibu: "20" },
     color: "#a9a161",
     title: "AMERICAN WHEAT ALE",
     context:
@@ -40,6 +44,7 @@ export const products = [
   {
     id: 4,
     prodImg: productImg5,
+    stats: { abv: "10.3%", ibu: "50" },
     color: "#dba94f",
     title: "ARMENIAN BARLEY WINE ",
     context:
@@ -48,11 +53,12 @@ export const products = [
   {
     id: 5,
     prodImg: productImg4,
+    stats: { abv: "4.8%", ibu: "20" },
     color: "#a9a161",
     title: "AMERICAN WHEAT ALE",
     context:
       "Ցիտրուսային թարմություն և մերձարևադարձային երանգներ։ ? Ծնվել է ԱՄՆ-ում, երբ գարեջրագործները որոշեցին ստեղծել գերմանական Weizen-ի ամերիկյան տարբերակը՝ համապատասխան տեղական գարեջրի սիրահարների համային նախասիրություններին։ 379-ի American Wheat Ale-ն ունի բաց գույն, նուրբ փրփուր, մեղմ դառնություն և թեթև ցիտրուսային բույր։ Հետհամը թարմացնող է և երկարատև։ ? Նրանց համար, ովքեր փորձառու են գարեջրի աշխարհում և պատրաստ են նոր հայտնագործությունների։",
-  }
+  },
 ];
 
 export const compactTextProds = [
@@ -62,7 +68,7 @@ export const compactTextProds = [
     stats: { abv: "4.8%", ibu: "28" },
     color: "#425f76",
     title: "PILSNER",
-    "379": "3 7 9",
+    379: "3 7 9",
     context:
       "Թեթև, թարմացնող ածիկի համ և դառնություն։ ? Ծնվել է չեխական Պլզեն քաղաքում՝ գարեջրագործների խմբի համարձակ փորձի արդյունքում։ ? «Թեթև ոսկեգույն, թափանցիկ և հարուստ փրփուրով»՝ այնպիսի գարեջուր, որը աշխարհը երբեք չէր ճանաչել։ Պիլսները լագերի տեսակ է. այն ունի արտահայտված ածիկի բույր, «խրթխրթան» և մաքուր համ, ինչպես նաև դառնություն։ Հետհամը չոր և թարմացնող է։ Կատարյալ ընտրություն է թեթևության և պարզության սիրահարների համար՝ ցանկացած պահի։",
   },
@@ -110,5 +116,5 @@ export const compactTextProds = [
     title: "AMERICAN WHEAT ALE",
     context:
       "379-ի American Wheat Ale-ն ունի բաց գույն, նուրբ փրփուր, մեղմ դառնություն և թեթև ցիտրուսային բույր։ Հետհամը թարմացնող է և երկարատև։ ? Նրանց համար, ովքեր փորձառու են գարեջրի աշխարհում և պատրաստ են նոր հայտնագործությունների։",
-  }
+  },
 ];

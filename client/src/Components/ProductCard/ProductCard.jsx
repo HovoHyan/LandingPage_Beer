@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "./productCard.scss";
 
@@ -11,11 +10,9 @@ const ProductCard = ({ title, color, stats, prodImg, prodDescription }) => {
           {title.length < 8 ? (
             <h2>{title}</h2>
           ) : (
-            <h2 style={{ fontSize: "26px", lineHeight: "0.87", top: "16px" }}>
-              {title}
-            </h2>
+            <h2 className="bWine">{title}</h2>
           )}
-          {title.length < 8 ? (
+          {title.split("").reverse().splice(0, 5).join("") !== " ENIW" ? (
             <>
               <div
                 className="titleColor"
@@ -48,13 +45,15 @@ const ProductCard = ({ title, color, stats, prodImg, prodDescription }) => {
             } else if (index === 2) {
               return (
                 <>
-                  <p>{elem}</p> <hr />
+                  <p>{elem}</p>{" "}
+                  <div className="hr" style={{ backgroundColor: color }}></div>
                 </>
               );
             } else {
               return (
                 <>
-                  <p>{elem}</p> <hr />
+                  <p>{elem}</p>{" "}
+                  <div className="hr" style={{ backgroundColor: color }}></div>
                 </>
               );
             }

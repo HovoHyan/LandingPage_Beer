@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import throttle from "lodash.throttle";
-import magicDragon from "../../../Videos/ForStory/magicVideo.mp4";
+import magicDragon from "../../../Videos/ForStory/magicOfDragon.mp4";
 import posterDragon from "../../../Icons/beige.png";
 import "./textSection.scss";
 
@@ -60,7 +60,7 @@ const TextSection = () => {
       className={`textSection ${isVisible ? "animate" : ""}`}
       ref={textRef}
     >
-      <h3>Վիշապի կախարդանքը</h3>
+      <h3>THE MAGIC OF DRAGON</h3>
       <p>
         Եվ այսպես մեր պատմությունը շարունակվում է. 379-ի վիշապը պահպանում և
         զարգացնում է գարեջրագործության ժառանգությունը, որը գալիս է մեր հողից,
