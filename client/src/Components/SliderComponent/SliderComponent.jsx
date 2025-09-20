@@ -68,7 +68,7 @@ const SliderComponent = ({
               return (
                 <>
                   <p key={index}>{elem}</p>
-                  <div className="hr"></div>
+                  <div className="hr" style={{backgroundColor: color}}></div>
                 </>
               );
             }

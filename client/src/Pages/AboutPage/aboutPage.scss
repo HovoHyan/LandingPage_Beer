@@ -16,11 +16,34 @@
     row-gap: 25px;
     h2 {
       font-size: 28px;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      .text379 {
+        display: "inline-block";
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-image: url("../../Images/379text.png");
+        background-size: cover;
+        background-position: center;
+        margin: -50px 20px -20px 0;
+      }
     }
 
     p {
       font-size: 20px;
       line-height: 1.8;
+      .text379 {
+        display: "inline-block";
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-image: url("../../Images/379text.png");
+        background-size: cover;
+        background-position: center;
+        margin: -50px 20px -20px 0;
+      }
     }
 
     a {
@@ -70,10 +93,20 @@
     .aboutGridBox {
       h2 {
         font-size: 24px;
+        .text379 {
+          width: 80px;
+          height: 80px;
+          margin: -30px 10px -10px 0;
+        }
       }
       p {
         font-size: 18px;
         line-height: 1.5;
+        .text379 {
+          width: 80px;
+          height: 80px;
+          margin: -10px 10px -10px 0;
+        }
       }
 
       &:nth-child(1),
@@ -92,16 +125,24 @@
     padding: 20px 24px;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    row-gap: 30px;
+    row-gap: 50px;
 
     .aboutGridBox {
       padding: 0 20px;
 
       h2 {
         font-size: 20px;
+        .text379 {
+          width: 60px;
+          height: 60px;
+        }
       }
       p {
         font-size: 16px;
+        .text379 {
+          width: 60px;
+          height: 60px;
+        }
       }
 
       a {
